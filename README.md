@@ -8,14 +8,14 @@
 A Tumblr clone exclusively for complaining. Built on Rails and Backbone.
 Users can:
 
-- [] Create accounts
-- [] Create sessions (log in)
-- [] Create blogs
-- [] Create blog posts
-- [] View blogs and posts
-- [] Subscribe to blogs
-- [] View a feed of subscribed blogs
-- [] Search blogs by title
+- [ ] Create accounts
+- [ ] Create sessions (log in)
+- [ ] Create blogs
+- [ ] Create blog posts
+- [ ] View blogs and posts
+- [ ] Subscribe to blogs
+- [ ] View a feed of subscribed blogs
+- [ ] Search blogs by title
 
 ## Design Docs
 * [View Wireframes][views]
@@ -57,11 +57,11 @@ Users can:
 [Details][phase-six]
 
 ### Bonus Features (TBD)
-- [] like a post
-- [] Click handler on blog titles that outputs an soundbite (ex: a baby waah, a sigh, etc ).
-- [] tags
-- [] Automated responses from website when you choose from set of predefined tags. These responses would send words of encouragement
-- [] markdown
+- [ ] like a post
+- [ ] Click handler on blog titles that outputs an soundbite (ex: a baby waah, a sigh, etc ).
+- [ ] tags
+- [ ] Automated responses from website when you choose from set of predefined tags. These responses would send words of encouragement
+- [ ] markdown
 
 
 [phase-one]: ./docs/phases/phase1.md
