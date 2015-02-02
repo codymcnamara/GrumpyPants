@@ -27,32 +27,32 @@ Users can:
 ## Implementation Timeline
 
 ### Phase 1: User Authentication (~1/2 day)
-
+Create secure login using rails. Users will be able to login or create a new account. The session will allow users stay logged in even after closing the browser.
 
 [Details][phase-one]
 
 ### Phase 2: Create Blog & Blog Show Page (~2 days)
-
+Users will be able to create their own blog and see it on their user show page. At this point the blog show page will only display the title since posts will not be implemented yet
 
 [Details][phase-two]
 
 ### Phase 3: Create Posts (~1.5 days)
-
+Users will be able to create posts and see all of their posts on their blog show page. These posts will be the composite views of the blog show view. Posts will be able to upload photos (using filepicker).
 
 [Details][phase-three]
 
 ### Phase 4: Feeds (~1.5 days)
-
+Users will be able to follow other users and their home page will be the Feeds Show view. Users can use the navigation bar create new posts and find blogs.  (the search link will not be active yet).
 
 [Details][phase-four]
 
 ### Phase 5: Searching for Blogs and Posts(~1 day)
-
+Users will be able to search for other blogs and results will be shown in SearchResults view.
 
 [Details][phase-five]
 
 ### Phase 6: Comments (~1 day)
-
+Users will be able comment on posts.
 
 [Details][phase-six]
 
