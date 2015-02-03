@@ -14,12 +14,13 @@ column name | data type | details
 id          | integer   | not null, primary key
 owner_id    | integer   | not null, foreign key (references users)
 title       | string    | not null
+filepicker_url | string |
 
 ## posts
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-author_id   | integer   | not null, foreign key (references users)
+blog_id     | integer   | not null, foreign key (references blogs)
 title       | string    | not null
 body        | string    |
 

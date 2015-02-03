@@ -62,6 +62,7 @@ Users will be able comment on posts.
 - [ ] tags
 - [ ] Automated responses from website when you choose from set of predefined tags. These responses would send words of encouragement
 - [ ] markdown
+- [ ] reblogging
 
 
 [phase-one]: ./docs/phases/phase1.md
