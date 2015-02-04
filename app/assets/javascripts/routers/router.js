@@ -4,13 +4,20 @@ Grumblr.Routers.Router = Backbone.Router.extend({
   },
 
   routes: {
-    "api/blogs/new": "new"
+    "api/blogs/new": "new",
+    "api/blogs/:id": "show"
   },
 
   new: function(){
     var newModel = new Grumblr.Models.Blog();
     var newView = new Grumblr.Views.BlogForm( { model: newModel });
     this._swapView(newView);
+  },
+
+  show: function(id){
+    var showModel = Grumblr.collection.getOrFetch(id);
+    var showView = new Grumblr.Views.BlogShow ( { model: showModel });
+    this._swapView(showView);
   },
 
   _swapView: function(view){

@@ -2,7 +2,8 @@ module Api
   class BlogsController < ApiController
     def create
       @blog = current_user.blogs.new(blog_params)
-
+      # @blog = Blog.new(blog_params)
+      # @blog.id = params[:id]
       if @blog.save
         render json: @blog
       else
@@ -23,11 +24,10 @@ module Api
     def destroy
 
     end
-
-  end
-
-  private
-  def blog_params
-    params.require(:blog).permit(:title, :filepicker_url)
+    
+    private
+    def blog_params
+      params.require(:blog).permit(:title, :filepicker_url)
+    end
   end
 end
