@@ -25,6 +25,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'newrelic_rpm'
 
+gem "backbone-on-rails"
+
+gem 'filepicker-rails'
+
+gem 'figaro'
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', require: 'bcrypt'
 

@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   attr_reader :password
 
   after_initialize :ensure_session_token
+  has_many :blogs
 
   validates(
     :password,
