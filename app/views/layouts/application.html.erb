@@ -2,17 +2,14 @@
 <html>
 <head>
   <title>Grumblr</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <script type="text/javascript"
     src="//api.filepicker.io/v1/filepicker.js"></script>
   <script>
     filepicker.setKey("<%= ENV['FILEPICKER_API_KEY'] %>");
   </script>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
-
-
-
 </head>
 <body>
 
@@ -25,9 +22,6 @@
 <% end %>
 
 <%= yield %>
-
-
-
 
 </body>
 </html>

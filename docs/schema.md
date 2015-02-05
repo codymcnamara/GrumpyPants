@@ -24,6 +24,7 @@ id          | integer   | not null, primary key
 blog_id     | integer   | not null, foreign key (references blogs)
 title       | string    | not null
 body        | string    |
+filepicker_url | string |
 
 ## followings
 column name | data type | details

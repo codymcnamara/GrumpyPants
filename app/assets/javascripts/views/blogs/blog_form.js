@@ -5,15 +5,21 @@ Grumblr.Views.BlogForm = Backbone.View.extend({
   template: JST['blogs/form'],
 
   events: {
-    "click .submit": "submit"
+    "click .submit": "submit",
+    "click .filepicker": "pickFile"
+  },
+
+  pickFile: function(event){
+    event.preventDefault();
+    var that = this;
+    filepicker.pick({container: 'modal'}, function(photo){
+      that.model.set({ filepicker_url: photo.url})
+    })
   },
 
   render: function(){
     var temp = this.template({});
     this.$el.html(temp);
-
-    var $filePickerInput = this.$("input[type=filepicker]");
-    filepicker.constructWidget($filePickerInput[0]);
     return this;
   },
 
@@ -22,7 +28,7 @@ Grumblr.Views.BlogForm = Backbone.View.extend({
     var that = this;
 
     var formData = $(event.delegateTarget).serializeJSON().blog;
-
+    debugger
     this.model.set(formData);
     this.model.save({}, {
       success: function(){

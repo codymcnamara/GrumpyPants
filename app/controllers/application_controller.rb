@@ -14,6 +14,10 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find_by_session_token(session[:session_token])
   end
 
+  def current_blog
+    @current_blog ||= Blog.find(params[:id])
+  end
+
   def logged_in?
     !current_user.nil?
   end

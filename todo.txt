@@ -3,10 +3,13 @@ questions:
 
 
 Todo
--look into filepicker, add pics to colums
-
+-download filepicker, take out the activate widget( On document ready?) thing, . put it in vender assests. require it in application.js
 
 
 
 random:
 dabaase heroku message: Added heroku-postgresql:hobby-dev to grumpypants (Free). Attached as HEROKU_POSTGRESQL_SILVER_URL
+
+
+remove turbolinks, it will save us time
+app.js, gemfile,
