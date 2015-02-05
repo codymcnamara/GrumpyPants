@@ -1,8 +1,7 @@
 module Api
   class PostsController < ApiController
     def create
-      #current_blog
-      #@post = current_user.blogs.new(blog_params)
+      @post = Post.new(post_params)
 
       if @post.save
         render json: @post
@@ -16,12 +15,9 @@ module Api
     end
 
     private
-    def current_blog
-      if params[:id]
-        @blog = Blog.find(params[:id])
-      #in the post form, i'll be able to set the blog id params there. (good to know: params come from url path or the data you send ot the control)
-      #maybe save this til I know how i'm gonna pass this stuff in, in the form
-      end
+
+    def post_params
+      params.require(:post).permit(:title, :post_url, :body, :blog_id)
     end
 
   end

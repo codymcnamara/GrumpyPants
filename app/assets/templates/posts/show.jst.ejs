@@ -1,0 +1,15 @@
+<p>
+  Post Title: <%= post.get("title") %>
+</p>
+
+<div class="post-img">
+  <% if (post.escape("post_url")) { %>
+    <img src="<%= post.escape("post_url") %>" alt="" />
+  <% } %>
+</div>
+
+<% if (post.escape("body")) { %>
+  <p>
+    Post Body: <%= post.escape("body") %>
+  </p>
+<% } %>
