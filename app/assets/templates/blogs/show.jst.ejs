@@ -5,6 +5,10 @@
 <strong>Blog Title: <%= blog.get("title") %></strong>
 
 
+<% if(blog.get("user_id") != Grumblr.currentUser.id){ %>
+  <button data-initial-follow-state="unfollowed" data-blog-id="<%= blog.get("user_id") %>" class="follow"></button>
+<% } %>
+
 
 <div class="blog-posts">
 

@@ -3,6 +3,22 @@ class User < ActiveRecord::Base
 
   after_initialize :ensure_session_token
   has_many :blogs
+  has_many(
+    :followings,
+    class_name: 'Following',
+    primary_key: :id,
+    foreign_key: :follower_id
+  )
+  has_many(
+    :followed_blogs,
+    through: :followings,
+    source: :blog
+  )
+  has_many(
+    :feed_posts,
+    through: :followed_blogs,
+    source: :posts
+  )
 
   validates(
     :password,

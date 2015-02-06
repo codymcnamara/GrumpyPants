@@ -10,7 +10,3 @@ window.Grumblr = {
     Backbone.history.start();
   }
 };
-
-$(document).ready(function(){
-  Grumblr.initialize();
-});

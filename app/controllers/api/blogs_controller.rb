@@ -11,10 +11,18 @@ module Api
       end
     end
 
-    # def index
-    #   @blogs = Blog.all
-    #
-    # end
+    def follow
+      @blog = Blog.find(params[:blog_id])
+      @blog.followers << current_user
+      render json: @blog
+      # render :follow
+    end
+
+    def unfollow
+      @blog = Blog.find(params[:blog_id])
+      @blog.followers -= [current_user]
+      render json: @blog
+    end
 
     def show
       @blog = Blog.find(params[:id])
@@ -24,7 +32,7 @@ module Api
     def destroy
 
     end
-    
+
     private
     def blog_params
       params.require(:blog).permit(:title, :filepicker_url)

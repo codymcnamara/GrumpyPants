@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
 
   namespace :api, defaults: { format: :json } do
-    resources :blogs
+    resources :blogs do
+      post "follow", to: "blogs#follow"
+      delete "follow", to: "blogs#unfollow"
+    end
     resources :posts
+    resources :followings
   end
 end

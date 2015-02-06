@@ -1,3 +1,10 @@
 <div id="content">
 
 </div>
+
+<script>
+  $(document).ready(function(){
+    Grumblr.currentUser = JSON.parse('<%= current_user.to_json.html_safe %>');
+    Grumblr.initialize();
+  });
+</script>

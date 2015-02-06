@@ -9,6 +9,10 @@ Grumblr.Views.BlogShow = Backbone.CompositeView.extend({
 
   template: JST['blogs/show'],
 
+  events: {
+    "click button.follow": "switchFollowStatus"
+  },
+
   addPost: function(post){
     var view = new Grumblr.Views.PostShow({
       model: post
@@ -32,5 +36,23 @@ Grumblr.Views.BlogShow = Backbone.CompositeView.extend({
     });
     this.addSubview('.post-form', formView);
   }
+
+  // switchFollowStatus: function(event){
+  //   debugger
+  //   var btn = $(event.target);
+  //   if( btn.data("follow-state") === 'unfollowed'){
+  //     var followModel = new Grumblr.Models.Following({ blog_id: this.model.get("id")})
+  //     followModel.save({}, {
+  //       success: function(){
+  //         btn.data("follow-state", )
+  //         btn.html("Unfollow");
+  //       }
+  //     })
+  //   } else {
+  //     // destroy follow
+  //   }
+
+    // will changing the data attribute change it on the the template or the current DOM?
+  // }
 
 });
