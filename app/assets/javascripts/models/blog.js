@@ -13,6 +13,8 @@ Grumblr.Models.Blog = Backbone.Model.extend({
       method: method,
       success: function(){
         //maybe we need to add to followings or followers here
+        options.btn.data("follow-state", options.followState)
+        options.btn.html(options.btnText);
         options.success && options.success();
       },
       error: function(){
@@ -32,16 +34,9 @@ Grumblr.Models.Blog = Backbone.Model.extend({
 
   posts: function(){
     if(!this._posts){
-      this._posts = new Grumblr.Collections.Posts( { blog: this })
+      this._posts = new Grumblr.Collections.Posts([], { blog: this })
     }
     return this._posts;
-  },
-
-  followings: function(){
-    if(!this._followings){
-      this._followings = new Grumblr.Collections.Followings( { blog: this })
-    }
-    return this._followings;
   },
 
   parse: function(response){
@@ -49,19 +44,7 @@ Grumblr.Models.Blog = Backbone.Model.extend({
       this.posts().set(response.posts, { parse: true });
       delete response.posts;
     }
-    if (response.followers){
-      this.followings().set(response.followers, { parse: true })
-    }
-
     return response;
   }
 
 });
-
-
-// m = new Grumblr.Models.Blog({id: 5});
-// m.follow({
-//   success: function(){
-//     alert('lol it worked');
-//   }
-// });

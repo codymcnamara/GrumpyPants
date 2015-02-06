@@ -14,4 +14,6 @@ class Following < ActiveRecord::Base
     foreign_key: :blog_id
   )
 
+  validates :follower_id, uniqueness: { scope: :blog_id }
+
 end

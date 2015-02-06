@@ -6,7 +6,10 @@
 
 
 <% if(blog.get("user_id") != Grumblr.currentUser.id){ %>
-  <button data-initial-follow-state="unfollowed" data-blog-id="<%= blog.get("user_id") %>" class="follow"></button>
+  <button
+  data-follow-state="<%= blog.get("followed") === true ? "following" : "unfollowed" %>"
+  class="follow"
+    ><%= blog.get("followed") === true ? "Unfollow" : "Follow" %></button>
 <% } %>
 
 

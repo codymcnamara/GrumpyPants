@@ -13,6 +13,8 @@ Grumblr.Collections.Blogs = Backbone.Collection.extend({
           coll.add(model);
         }
       })
+    } else {
+      model.fetch();
     }
 
     return model;

@@ -3,7 +3,8 @@ Grumblr.Views.BlogShow = Backbone.CompositeView.extend({
   initialize: function(){
     this.postCollection = this.model.posts();
     this.listenTo(this.model, "sync", this.render);
-    this.listenTo(this.postCollection, "add", this.addPost)
+    this.listenTo(this.postCollection, "add", this.addPost);
+    this.postCollection.each(this.addPost.bind(this))
     this.createPostForm();
   },
 
@@ -14,6 +15,7 @@ Grumblr.Views.BlogShow = Backbone.CompositeView.extend({
   },
 
   addPost: function(post){
+    console.log("adding post")
     var view = new Grumblr.Views.PostShow({
       model: post
     });
@@ -35,24 +37,23 @@ Grumblr.Views.BlogShow = Backbone.CompositeView.extend({
       model: this.model,
     });
     this.addSubview('.post-form', formView);
+  },
+
+  switchFollowStatus: function(event){
+    var btn = $(event.target);
+    if( btn.data("follow-state") === 'unfollowed'){
+      this.model.follow({
+        btn: btn,
+        followState: "following",
+        btnText: 'Unfollow'
+      })
+    } else {
+      this.model.unfollow({
+        btn: btn,
+        followState: "unfollowed",
+        btnText: 'Follow'
+      })
+    }
   }
-
-  // switchFollowStatus: function(event){
-  //   debugger
-  //   var btn = $(event.target);
-  //   if( btn.data("follow-state") === 'unfollowed'){
-  //     var followModel = new Grumblr.Models.Following({ blog_id: this.model.get("id")})
-  //     followModel.save({}, {
-  //       success: function(){
-  //         btn.data("follow-state", )
-  //         btn.html("Unfollow");
-  //       }
-  //     })
-  //   } else {
-  //     // destroy follow
-  //   }
-
-    // will changing the data attribute change it on the the template or the current DOM?
-  // }
 
 });

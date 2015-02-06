@@ -5,7 +5,7 @@ questions:
 Should i have an all users page so people people can find blogs to follow?
 
 -how should i parse data coming in from
--will changing the data attribute on tempalte with jquery change it in other renderings of hte just this view?asdaff
+-will changing the data attribute on template with jquery change it in other renderings of hte just this view?asdaff
 
 steps
   -add follow/unfollow button to each blog show page
