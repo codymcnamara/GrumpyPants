@@ -22,4 +22,4 @@ Grumblr.Collections.Blogs = Backbone.Collection.extend({
 });
 
 
-Grumblr.collection = new Grumblr.Collections.Blogs();
+Grumblr.blogs = new Grumblr.Collections.Blogs();

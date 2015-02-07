@@ -10,8 +10,22 @@ module Api
       end
     end
 
-    def show
+    # def feed
+    #   blogs = Blog.all
+    #   @posts = []
+    #
+    #   blogs.each do |blog|
+    #     blog.followers.each do |follower|
+    #       @posts << blog.posts if follower.id == current_user.id
+    #     end
+    #   end
+    #
+    #   render json: @posts[0]
+    # end
 
+    def index
+      @posts = current_user.feed_posts
+      render :index
     end
 
     private

@@ -1,5 +1,7 @@
 Grumblr.Collections.Posts = Backbone.Collection.extend({
-  urlRoot: 'api/posts',
+  url: 'api/posts',
   model: Grumblr.Models.Post
 
 });
+
+Grumblr.feed = new Grumblr.Collections.Posts();

@@ -4,7 +4,7 @@ Grumblr.Views.BlogShow = Backbone.CompositeView.extend({
     this.postCollection = this.model.posts();
     this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.postCollection, "add", this.addPost);
-    this.postCollection.each(this.addPost.bind(this))
+    this.postCollection.each(this.addPost.bind(this));
     this.createPostForm();
   },
 
@@ -15,7 +15,6 @@ Grumblr.Views.BlogShow = Backbone.CompositeView.extend({
   },
 
   addPost: function(post){
-    console.log("adding post")
     var view = new Grumblr.Views.PostShow({
       model: post
     });

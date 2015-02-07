@@ -32,7 +32,7 @@ Grumblr.Views.BlogForm = Backbone.View.extend({
     this.model.set(formData);
     this.model.save({}, {
       success: function(){
-        Grumblr.collection.add(that.model, {merge: true});
+        Grumblr.blogs.add(that.model, {merge: true});
         var showUrl = "api/blogs/" + that.model.get("id").toString()
         Backbone.history.navigate(showUrl, { trigger: true });
       }

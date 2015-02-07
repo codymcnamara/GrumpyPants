@@ -4,8 +4,7 @@ questions:
 -TA's suggest doing reblogging over search page.
 Should i have an all users page so people people can find blogs to follow?
 
--how should i parse data coming in from
--will changing the data attribute on template with jquery change it in other renderings of hte just this view?asdaff
+
 
 steps
   -add follow/unfollow button to each blog show page
@@ -16,6 +15,8 @@ steps
 
 
   -create feed show page
+    -
+
     -find all the blogs that the user is following:
       -create a backbone User model and make a another model/collection of followed_blog(s)
         -this seems tedius and maybe not right way

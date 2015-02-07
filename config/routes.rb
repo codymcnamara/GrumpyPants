@@ -8,7 +8,8 @@ Rails.application.routes.draw do
       post "follow", to: "blogs#follow"
       delete "follow", to: "blogs#unfollow"
     end
-    resources :posts
+    resources :posts, only: [:create, :index]
+    get 'posts/feed', to: 'posts#feed', as: :feed
     resources :followings
   end
 end

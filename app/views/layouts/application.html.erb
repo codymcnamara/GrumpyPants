@@ -13,6 +13,7 @@
 </head>
 <body>
 
+<a href="#/feed"><h1>Your Feed</h1></a>
 <% if current_user.nil? %>
   <%= link_to "Sign in", new_session_url %> or
   <%= link_to "Sign up", new_user_url %>

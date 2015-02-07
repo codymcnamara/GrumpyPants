@@ -4,8 +4,9 @@ Grumblr.Routers.Router = Backbone.Router.extend({
   },
 
   routes: {
-    "api/blogs/new": "new",
-    "api/blogs/:id": "show"
+    'feed': 'feed',
+    "blogs/new": "new",
+    "blogs/:id": "show"
   },
 
   new: function(){
@@ -15,7 +16,7 @@ Grumblr.Routers.Router = Backbone.Router.extend({
   },
 
   show: function(id){
-    var showModel = Grumblr.collection.getOrFetch(id);
+    var showModel = Grumblr.blogs.getOrFetch(id);
     var showView = new Grumblr.Views.BlogShow ( { model: showModel });
     this._swapView(showView);
   },
@@ -24,6 +25,15 @@ Grumblr.Routers.Router = Backbone.Router.extend({
     this.currentView && this.currentView.remove();
     this.currentView = view;
     this.$rootEl.html(view.render().$el);
+  },
+
+  feed: function(){
+    // Grumblr.feedCollection.fetchPosts();
+    Grumblr.feed.fetch();
+    var feedView = new Grumblr.Views.FeedShow({
+      collection: Grumblr.feed
+    });
+    this._swapView(feedView)
   }
 
 });
