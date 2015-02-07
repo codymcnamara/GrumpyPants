@@ -13,8 +13,6 @@ module Api
     def destroy
       @follow = Following.find(:id)
       @follow.destroy
-      
-      # not sure what the point of render empy json is
       render json: {}
     end
 

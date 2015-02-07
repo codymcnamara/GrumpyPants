@@ -28,7 +28,6 @@ Grumblr.Routers.Router = Backbone.Router.extend({
   },
 
   feed: function(){
-    // Grumblr.feedCollection.fetchPosts();
     Grumblr.feed.fetch();
     var feedView = new Grumblr.Views.FeedShow({
       collection: Grumblr.feed
