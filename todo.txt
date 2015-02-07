@@ -7,54 +7,39 @@ Should i have an all users page so people people can find blogs to follow?
 
 
 steps
-  -add follow/unfollow button to each blog show page
-    -create follow form. sends request to db, on success change text to unfollow
-    -check if current user already following
-      -search in collection for model where user_id = currentUserId and blog_id = the current blog_id. if match or not  set data-attribute accordingly
-      -
-
-
-  -create feed show page
-    -
-
-    -find all the blogs that the user is following:
-      -create a backbone User model and make a another model/collection of followed_blog(s)
-        -this seems tedius and maybe not right way
-      -find all the models in followings collection where follower_id === currentUserId
-    -get all the posts from all those blogs
-      -
-    -make feed composite view
-      -render all the posts and order by created_at
+  -make nav view
+  -start styling, figure out modals, (cause new post will be modal)
 
 
   -create nav bar
-  -do styling
-  -all blog page (list of blog titles w/ follow button )
+    -build backbone view
+
+    -add logic so "new post" and "my blog" buttons refers to the "current_blog"
+    -remove "new post" form from botton of blog show view (it's in nav bar now)
+    -need to add dropdown or something for switching between different blogs
+      -maybe my blog will have a switch blog button, but then you couldn't just click one button and change
+      -maybe instead of a logout button there could be settings button where you can log out or switch blog -let's do this
+
+
+  -Styling:
+    -style the root/login pages
+    -create modals for the forms
+    -style blog show view
+
+
+  -all blogs page
+    -list of blog titles w/ follow button
 
 
 Todo
 
-Styling:
--style the root/login pages
--create modals for the forms
--style blog show view
 
-Feed:
--show page of other people's blogs
-  -how should i organize this? (by title? limit one per user?)
--follow button
-  -on other people's blog show page
-  -next to blog title in all blogs page
 
--Feed Show
-  -composite view
-  -subviews are posts from blogs that user is following (ordered by post created_at?)
-  -add followings table/model/etc
 
-Nav
-  -create nav bar
-  -add logic so "new post" and "my blog" buttons refers to the "current_blog"
-  -remove "new post" form from botton of blog show view (it's in nav bar now)
+Bonus
+-feed show page
+  -order feeds by created_at
 
+-format
 
 -add heroku link to read me

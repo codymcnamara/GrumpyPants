@@ -10,7 +10,11 @@ window.Grumblr = {
     Backbone.history.start();
   },
   initializeNav: function(){
-    $('#nav').append("<h3>nav nav nav</h3>")
+    var $navEl = $('#nav')
+
+    var navView = new Grumblr.Views.NavShow()
+    $navEl.html(navView.render().$el);
+
     //actually make a backbone view here
   }
 };
