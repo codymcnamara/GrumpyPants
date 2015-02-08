@@ -1,29 +1,36 @@
-<h1>New User</h1>
 
-<%= render "shared/errors" %>
+<div class="login">
+  <h1>New User</h1>
 
-<form action="<%= users_url %>" method="post">
-  <input
-    type="hidden"
-    name="authenticity_token"
-    value="<%= form_authenticity_token %>">
+  <%= render "shared/errors" %>
 
-  <label for="user_username">Username</label>
-  <input type="text"
-         name="user[username]"
-         id="user_username">
-  <br>
-  <label for="user_email">Email</label>
-  <input type="text"
-         name="user[email]"
-         id="user_email">
-  <br>
+  <form action="<%= users_url %>" method="post">
+    <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>">
 
-  <label for="user_password">Password</label>
-  <input type="password"
-         name="user[password]"
-         id="user_password">
-  <br>
+    <div class="form-group">
+      <input type="text"
+             name="user[username]"
+             id="user_username"
+             placeholder="username">
+    <div>
 
-  <input type="submit">
-</form>
+    <div class="form-group">
+      <input type="text"
+             name="user[email]"
+             id="user_email"
+             placeholder="email">
+    <div>
+
+    <div class="form-group">
+      <input type="password"
+             name="user[password]"
+             id="user_password"
+             placeholder="password">
+    <div>
+
+    <input type="submit">
+  </form>
+</div>

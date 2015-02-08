@@ -9,12 +9,10 @@ window.Grumblr = {
     new Grumblr.Routers.Router({ $rootEl: $rootEl })
     Backbone.history.start();
   },
+
   initializeNav: function(){
     var $navEl = $('#nav')
-
     var navView = new Grumblr.Views.NavShow()
     $navEl.html(navView.render().$el);
-
-    //actually make a backbone view here
   }
 };

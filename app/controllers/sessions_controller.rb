@@ -12,13 +12,13 @@ class SessionsController < ApplicationController
       render :new
     else
       login_user!(user)
-      redirect_to user_url(user)
+      redirect_to '#/feed'
     end
   end
 
   def destroy
     logout_user!
-    redirect_to new_session_url
+    render json: { logged_out: true }
   end
 
   def new

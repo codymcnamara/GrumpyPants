@@ -1,13 +1,20 @@
-<nav id="nav">
+<% if current_user.nil? %>
+  <%= link_to "Sign in", new_session_url %> or
+  <%= link_to "Sign up", new_user_url %>
+<% else %>
+  <%= current_user.username %>
+  <%= button_to "Logout", session_url, method: :delete %>
 
-</nav>
-<div id="content">
+  <nav id="nav">
+  </nav>
 
-</div>
+  <div id="content">
+  </div>
 
-<script>
-  $(document).ready(function(){
-    Grumblr.currentUser = JSON.parse('<%= current_user.to_json.html_safe %>');
-    Grumblr.initialize();
-  });
-</script>
+  <script>
+    $(document).ready(function(){
+      Grumblr.currentUser = JSON.parse('<%= current_user.to_json.html_safe %>');
+      Grumblr.initialize();
+    });
+  </script>
+<% end %>

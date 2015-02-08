@@ -1,9 +1,14 @@
 questions:
 
+-how do i store the currentBlog info, so that it persists like current user? do i have to do some cookie stuff?
+-how do i make a backbone logout button?
+if i want to have a logout button in my backbone view, how can I have it access the session logic i wrote in rails? I tried an ajax request but it's not working :/
+-has anyone made a logout button as part of a backbone view? I'm trying to have mine access my session logic that i wrote in rails I can't figure out how to do it
+
+
 -should navigation bar be a backbone view?
 -TA's suggest doing reblogging over search page.
 Should i have an all users page so people people can find blogs to follow?
-
 
 
 steps
