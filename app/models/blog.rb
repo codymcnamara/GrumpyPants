@@ -16,5 +16,6 @@ class Blog < ActiveRecord::Base
     source: :follower
   )
 
+  
 
 end

@@ -34,5 +34,9 @@ Grumblr.Views.NavShow = Backbone.View.extend({
     $('#myModal').remove();
     $('#content').append(postFormView.render().$el)
     $('#myModal').modal()
+  },
+
+  currentBlog: function(){
+    Blog.where("user_id = '1'").order('created_at DESC')[0]
   }
 });

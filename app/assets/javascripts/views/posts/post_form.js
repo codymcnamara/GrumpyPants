@@ -5,12 +5,18 @@ Grumblr.Views.PostForm = Backbone.View.extend({
 
   template: JST['posts/form'],
 
+  initialize: function(){
+    // add sync lystener for when blogs get fetched
+  },
+
   events: {
+    // these events aren't working
     "click .submit": "submit",
     "click .filepicker": "pickFile"
   },
 
   pickFile: function(event){
+    debugger
     event.preventDefault();
     var that = this;
     filepicker.pick({container: 'window'}, function(photo){
@@ -27,13 +33,17 @@ Grumblr.Views.PostForm = Backbone.View.extend({
   submit: function(event){
     event.preventDefault();
     var that = this;
-    var formData = $(event.delegateTarget).serializeJSON().post;
+    var formData = $(event.delegateTarget).find('form').serializeJSON().post
     var post = new Grumblr.Models.Post(formData);
-    post.set('blog_id', this.model.id);
-    post.save({}, {
+    Grumblr.blogs.fetch({
       success: function(){
-        that.model.posts().add(post, {merge: true});
-        that.render();
+        var currentBlog = Grumblr.blogs.findWhere({ user_id: Grumblr.currentUser.id})
+        post.set('blog_id', currentBlog.get("id"));
+        post.save({}, {
+          success: function(){
+            currentBlog.posts().add(post, {merge: true});
+          }
+        });
       }
     });
   }

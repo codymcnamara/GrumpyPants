@@ -33,6 +33,11 @@ module Api
 
     end
 
+    def index
+      @blogs = Blog.all
+      render json: @blogs
+    end
+
     private
     def blog_params
       params.require(:blog).permit(:title, :filepicker_url)
