@@ -1,6 +1,7 @@
 Grumblr.Views.PostForm = Backbone.View.extend({
 
-  tagName: 'form',
+  className: "modal fade",
+  id: 'myModal',
 
   template: JST['posts/form'],
 
@@ -12,7 +13,7 @@ Grumblr.Views.PostForm = Backbone.View.extend({
   pickFile: function(event){
     event.preventDefault();
     var that = this;
-    filepicker.pick({container: 'modal'}, function(photo){
+    filepicker.pick({container: 'window'}, function(photo){
       that.model.set({ post_url: photo.url})
     })
   },

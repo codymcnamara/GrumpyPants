@@ -15,7 +15,6 @@ steps
   -make nav view
   -start styling, figure out modals, (cause new post will be modal)
 
-
   -create nav bar
     -build backbone view
 
@@ -36,9 +35,13 @@ steps
     -list of blog titles w/ follow button
 
 
-Todo
+  -random
+    -format errors so they show up correctly in backbone forms (journal app has good example of this)
 
 
+currentBlog dilema:
+  -one blog per user:
+    -when they sign up for Grumblr they'll pick the name of their Blog
 
 
 Bonus

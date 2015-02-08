@@ -27,3 +27,14 @@
   border-style: solid;
   border-color: grey;
 }
+
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 40px;        // Make inputs at least the height of their button counterpart
+}
+
+.inner-login{
+  width: 300px;
+  margin: 0 auto;
+}
