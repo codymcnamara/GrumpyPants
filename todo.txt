@@ -1,7 +1,8 @@
 questions:
 
 -figuring out how to sort posts by created_at
--for "my blog" nav link i do blog/currentUser.id , i'm guessing that's hacky/bad
+
+-for "my blog" nav link can i refactor and make a currentBlog collection method?
 -how can i make my submit post form method less ugly?
 
 -should i have somewhere that says the username always, so user knows who they're logged in as?

@@ -5,7 +5,8 @@ Grumblr.Views.NavShow = Backbone.View.extend({
 
   events: {
     'click a#logout': "logout",
-    'click a#new-post': "newPost"
+    'click a#new-post': "newPost",
+    'click a#my-blog': 'myBlog'
   },
 
   render: function(){
@@ -40,12 +41,14 @@ Grumblr.Views.NavShow = Backbone.View.extend({
     // Blog.where("user_id = '1'").order('created_at DESC')[0]
   },
 
-  myBlog: function(){
+  myBlog: function(event){
+    event.preventDefault();
+
     Grumblr.blogs.fetch({
       success: function(){
         var currentBlog = Grumblr.blogs.findWhere({ user_id: Grumblr.currentUser.id})
         var blogUrl = "#blogs/" + currentBlog.get("id")
-        Backbone.history.navigate("blogs/" + currentBlog.get("id"))
+        Backbone.history.navigate("blogs/" + currentBlog.get("id"), { trigger: true })
       }
     });
   }

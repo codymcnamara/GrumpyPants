@@ -21,7 +21,7 @@ Grumblr.Collections.Blogs = Backbone.Collection.extend({
   },
 
   currentBlog: function(){
-
+    // this could be useful method for refactoring
   }
 });
 
