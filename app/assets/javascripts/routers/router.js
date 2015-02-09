@@ -10,9 +10,20 @@ Grumblr.Routers.Router = Backbone.Router.extend({
   },
 
   new: function(){
-    var newModel = new Grumblr.Models.Blog();
-    var newView = new Grumblr.Views.BlogForm( { model: newModel });
-    this._swapView(newView);
+    // redirect if user already has a blog
+    var that = this;
+    Grumblr.blogs.fetch({
+      success: function(){
+        var currentBlog = Grumblr.blogs.findWhere({ user_id: Grumblr.currentUser.id})
+        if(currentBlog){
+          Backbone.history.navigate('#/feed');
+        } else {
+          var newModel = new Grumblr.Models.Blog();
+          var newView = new Grumblr.Views.BlogForm( { model: newModel });
+          that._swapView(newView);
+        }
+      }
+    });
   },
 
   show: function(id){

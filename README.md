@@ -2,7 +2,7 @@
 
 [Heroku link][heroku]
 
-[heroku]: #
+[heroku]: http://grumpypants.herokuapp.com/
 
 ## Minimum Viable Product
 A Tumblr clone exclusively for complaining. Built on Rails and Backbone.
