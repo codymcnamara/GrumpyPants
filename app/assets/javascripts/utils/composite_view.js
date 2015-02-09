@@ -18,10 +18,6 @@ Backbone.CompositeView = Backbone.View.extend({
     }
   },
 
-  unshiftSubview: function(){
-
-  },
-
   attachSubviews: function () {
     var view = this;
     _(this.subviews()).each(function (subviews, selector) {

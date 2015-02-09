@@ -12,19 +12,9 @@ questions:
 -how do i store the currentBlog info, so that it persists like current user? do i have to do some cookie stuff?
 
 steps
-  -order posts on "feed" and "blog show" page by created_at
-    -will's idea.
-      -add column to posts which holds intrger value of created at
-      -in post.rb model, add "after save" callback with method that turns created_at into string and adds it to the new column
-      -then use comparator and sort it by that
-    -trello way
-      -ord column
-    -cj way
-      -implement unshiftSubview
-    -which pages need it?
-      -blog show (order posts)
-      -all blogs page (order blogs)
-      -feed show page (order )
+  -default blog pic
+    -rails blog model
+      -after initialize ensure blog pic
 
   -Pagination
     -use kaminari for pagination
