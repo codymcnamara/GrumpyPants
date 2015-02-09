@@ -37,6 +37,16 @@ Grumblr.Views.NavShow = Backbone.View.extend({
   },
 
   currentBlog: function(){
-    Blog.where("user_id = '1'").order('created_at DESC')[0]
+    // Blog.where("user_id = '1'").order('created_at DESC')[0]
+  },
+
+  myBlog: function(){
+    Grumblr.blogs.fetch({
+      success: function(){
+        var currentBlog = Grumblr.blogs.findWhere({ user_id: Grumblr.currentUser.id})
+        var blogUrl = "#blogs/" + currentBlog.get("id")
+        Backbone.history.navigate("blogs/" + currentBlog.get("id"))
+      }
+    });
   }
 });

@@ -1,0 +1,9 @@
+<p>
+  Blog Title: <%= blog.get("title") %>
+</p>
+
+<div class="blog-img">
+  <% if (blog.escape("filepicker_url")) { %>
+    <img src="<%= blog.escape("filepicker_url") %>" alt="" />
+  <% } %>
+</div>

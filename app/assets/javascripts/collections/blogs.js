@@ -18,6 +18,10 @@ Grumblr.Collections.Blogs = Backbone.Collection.extend({
     }
 
     return model;
+  },
+
+  currentBlog: function(){
+
   }
 });
 

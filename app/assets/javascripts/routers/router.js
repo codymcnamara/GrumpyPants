@@ -6,7 +6,8 @@ Grumblr.Routers.Router = Backbone.Router.extend({
   routes: {
     'feed': 'feed',
     "blogs/new": "new",
-    "blogs/:id": "show"
+    "blogs/:id": "show",
+    "allblogs": "allBlogs"
   },
 
   new: function(){
@@ -44,6 +45,14 @@ Grumblr.Routers.Router = Backbone.Router.extend({
       collection: Grumblr.feed
     });
     this._swapView(feedView)
+  },
+
+  allBlogs: function(){
+    Grumblr.blogs.fetch();
+    var allBlogsView = new Grumblr.Views.AllBlogsShow({
+      collection: Grumblr.blogs
+    });
+    this._swapView(allBlogsView)
   }
 
 });

@@ -17,7 +17,6 @@ module Api
       @blog = Blog.find(params[:blog_id])
       @blog.followers << current_user
       render json: @blog
-      # render :follow
     end
 
     def unfollow

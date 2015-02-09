@@ -1,22 +1,20 @@
 questions:
 
+-figuring out how to sort posts by created_at
+-for "my blog" nav link i do blog/currentUser.id , i'm guessing that's hacky/bad
+-how can i make my submit post form method less ugly?
+
 -should i have somewhere that says the username always, so user knows who they're logged in as?
 
 -why did the "null: false" for post title let a post without a title save to the db?
-
--for "my blog" nav link i do blog/currentUser.id , i'm guessing that's hacky/bad
--can i make my submit post form method less ugly?
-
-
 -how do i store the currentBlog info, so that it persists like current user? do i have to do some cookie stuff?
 
 steps
   -*all blogs page
     -list of blog titles w/ follow button
     -make wireframe for new blogs
-
-  -format errors
-    -so they show up correctly in backbone forms (journal app has good example of this)
+    -all blogs composite view View
+    -blog item subviews
 
   -order posts on "feed" and "blog show" page by created_at
     -will's idea.
@@ -43,6 +41,7 @@ After MVP
   -sad puppy page
   -reblogging
   -search
+  -deleting posts/blogs
   -comments
   -likes
   -multiple blogs per user
