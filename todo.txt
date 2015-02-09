@@ -1,7 +1,5 @@
 questions:
 
--follow button
-  -index jbuilder, array of blogs, render the partial for each one
 -how can i make my submit post form method less ugly?
 
 -figuring out how to sort posts by created_at
@@ -14,12 +12,6 @@ questions:
 -how do i store the currentBlog info, so that it persists like current user? do i have to do some cookie stuff?
 
 steps
-  -*all blogs page
-    -list of blog titles w/ follow button
-    -make wireframe for new blogs
-    -all blogs composite view View
-    -blog item subviews
-
   -order posts on "feed" and "blog show" page by created_at
     -will's idea.
       -add column to posts which holds intrger value of created at
@@ -29,6 +21,10 @@ steps
       -ord column
     -cj way
       -implement unshiftSubview
+    -which pages need it?
+      -blog show (order posts)
+      -all blogs page (order blogs)
+      -feed show page (order )
 
   -Pagination
     -use kaminari for pagination
@@ -38,6 +34,8 @@ steps
     -style nav
     -style the root/login pages
     -create modals for the forms
+    -feed show
+      -also include blog name somewhere next to the posts
 
 After MVP
   -good styling
