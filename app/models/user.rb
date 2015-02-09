@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   attr_reader :password
 
   after_initialize :ensure_session_token
-  has_many :blogs
+  has_one :blog
   has_many(
     :followings,
     class_name: 'Following',

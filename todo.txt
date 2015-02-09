@@ -1,24 +1,37 @@
 questions:
 
+-should i have somewhere that says the username always, so user knows who they're logged in as?
+
 -how do i store the currentBlog info, so that it persists like current user? do i have to do some cookie stuff?
 
--should navigation bar be a backbone view?
 -TA's suggest doing reblogging over search page.
 Should i have an all users page so people people can find blogs to follow?
 
 
 steps
   -one blog per user
-    -redirect user if they try to access blogs/new after making blog
-    -on submit button for signup, on success take them to new blog page
     -validations
-      -change user has_many blogs to has_one blog
       -clear out database
+      -change user has_many blogs to has_one blog
+      -database level validations?
+        -how do i ensure at db level that user only has one blog?
+        -validate that user_id is unique (no other blogs have the same user_id)
+        -add unique index to user_id on blogs table (do this with a migration)
+    -"my blog" nav button
 
   -finish working on logout button
+    -get rid of non-backbone logout button
+
+  -new post
+    -have modal close after successful submission, render errors if not
 
   -all blogs page
     -list of blog titles w/ follow button
+
+  -miscellenaous
+    -format errors so they show up correctly in backbone forms (journal app has good example of this)
+    -order feeds by created_at
+    -use kaminari for pagination
 
   -Styling:
     -style blog show view
@@ -26,9 +39,11 @@ steps
     -style the root/login pages
     -create modals for the forms
 
-
-
-  -miscllenaous
-    -format errors so they show up correctly in backbone forms (journal app has good example of this)
-    -order feeds by created_at
-    -use kaminari for pagination
+After MVP
+  -good styling
+  -seed data
+  -reblogging
+  -search
+  -comments
+  -likes
+  -multiple blogs per user

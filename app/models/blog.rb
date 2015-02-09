@@ -1,6 +1,7 @@
 class Blog < ActiveRecord::Base
 
   validates :user_id, :title, presence: true
+  validates :user_id, uniqueness: true
 
   belongs_to :user
   has_many :posts
@@ -16,6 +17,6 @@ class Blog < ActiveRecord::Base
     source: :follower
   )
 
-  
+
 
 end

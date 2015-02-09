@@ -1,9 +1,11 @@
 module Api
   class BlogsController < ApiController
     def create
-      @blog = current_user.blogs.new(blog_params)
-      # @blog = Blog.new(blog_params)
-      # @blog.id = params[:id]
+      # @blog = current_user.blog.new(blog_params)
+        #why doesn't this ^ work anymore?
+      @blog = Blog.new(blog_params)
+      @blog.user_id = current_user.id
+
       if @blog.save
         render json: @blog
       else
