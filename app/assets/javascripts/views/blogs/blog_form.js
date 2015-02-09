@@ -27,6 +27,15 @@ Grumblr.Views.BlogForm = Backbone.View.extend({
     event.preventDefault();
     var that = this;
 
+    function errors (model, response) {
+      $('.errors').empty();
+      response.responseJSON.forEach(function (el) {
+        var li = $('<li></li>');
+        li.html(el);
+        $('.errors').append(li);
+      }.bind(this));
+    }
+
     var formData = $(event.delegateTarget).serializeJSON().blog;
     this.model.set(formData);
     this.model.save({}, {
@@ -34,7 +43,9 @@ Grumblr.Views.BlogForm = Backbone.View.extend({
         Grumblr.blogs.add(that.model, {merge: true});
         var showUrl = "blogs/" + that.model.get("id").toString()
         Backbone.history.navigate(showUrl, { trigger: true });
-      }
+      },
+
+      error: errors.bind(this)
     });
   }
 

@@ -35,6 +35,16 @@ Grumblr.Views.PostForm = Backbone.View.extend({
     var that = this;
     var formData = $(event.delegateTarget).find('form').serializeJSON().post
     var post = new Grumblr.Models.Post(formData);
+
+    function errors (model, response) {
+      $('.errors').empty();
+      response.responseJSON.forEach(function (el) {
+        var li = $('<li></li>');
+        li.html(el);
+        $('.errors').append(li);
+      }.bind(this));
+    }
+
     Grumblr.blogs.fetch({
       success: function(){
         var currentBlog = Grumblr.blogs.findWhere({ user_id: Grumblr.currentUser.id})
@@ -42,7 +52,12 @@ Grumblr.Views.PostForm = Backbone.View.extend({
         post.save({}, {
           success: function(){
             currentBlog.posts().add(post, {merge: true});
-          }
+            var blogUrl = "#blogs/" + post.get("blog_id")
+            $('#myModal').modal('hide')
+            Backbone.history.navigate(blogUrl, { trigger: true })
+          },
+
+          error: errors.bind(that)
         });
       }
     });

@@ -2,35 +2,33 @@ questions:
 
 -should i have somewhere that says the username always, so user knows who they're logged in as?
 
+-why did the "null: false" for post title let a post without a title save to the db?
+
+-for "my blog" nav link i do blog/currentUser.id , i'm guessing that's hacky/bad
+-can i make my submit post form method less ugly?
+
+
 -how do i store the currentBlog info, so that it persists like current user? do i have to do some cookie stuff?
 
--TA's suggest doing reblogging over search page.
-Should i have an all users page so people people can find blogs to follow?
-
-
 steps
-  -one blog per user
-    -validations
-      -clear out database
-      -change user has_many blogs to has_one blog
-      -database level validations?
-        -how do i ensure at db level that user only has one blog?
-        -validate that user_id is unique (no other blogs have the same user_id)
-        -add unique index to user_id on blogs table (do this with a migration)
-    -"my blog" nav button
-
-  -finish working on logout button
-    -get rid of non-backbone logout button
-
-  -new post
-    -have modal close after successful submission, render errors if not
-
-  -all blogs page
+  -*all blogs page
     -list of blog titles w/ follow button
+    -make wireframe for new blogs
 
-  -miscellenaous
-    -format errors so they show up correctly in backbone forms (journal app has good example of this)
-    -order feeds by created_at
+  -format errors
+    -so they show up correctly in backbone forms (journal app has good example of this)
+
+  -order posts on "feed" and "blog show" page by created_at
+    -will's idea.
+      -add column to posts which holds intrger value of created at
+      -in post.rb model, add "after save" callback with method that turns created_at into string and adds it to the new column
+      -then use comparator and sort it by that
+    -trello way
+      -ord column
+    -cj way
+      -implement unshiftSubview
+
+  -Pagination
     -use kaminari for pagination
 
   -Styling:
@@ -42,6 +40,7 @@ steps
 After MVP
   -good styling
   -seed data
+  -sad puppy page
   -reblogging
   -search
   -comments

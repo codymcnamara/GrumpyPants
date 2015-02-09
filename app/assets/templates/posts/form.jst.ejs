@@ -2,6 +2,10 @@
   <div class="modal-content">
 
     <div class="modal-body">
+      <ul class="errors">
+
+      </ul>
+
       <form>
         <div class="form-group">
           <input type="text" name="post[title]"
@@ -10,7 +14,6 @@
 
         <div class="form-group">
           <textarea name="post[body]" placeholder="Whine here"></textarea>
-
         </div>
 
         <div class="form-group">
@@ -20,7 +23,8 @@
     </div>
 
     <div class="modal-footer">
-      <button class="submit">Post</button>
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <button type="button" class=" submit btn btn-primary">Post</button>
     </div>
 
   </div>
