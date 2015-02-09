@@ -2,8 +2,6 @@ questions:
 
 -how can i make my submit post form method less ugly?
 
--figuring out how to sort posts by created_at
-
 -for "my blog" nav link can i refactor and make a currentBlog collection method?
 
 -should i have somewhere that says the username always, so user knows who they're logged in as?
@@ -15,6 +13,7 @@ steps
   -default blog pic
     -rails blog model
       -after initialize ensure blog pic
+    -scale size of pictures
 
   -Pagination
     -use kaminari for pagination
