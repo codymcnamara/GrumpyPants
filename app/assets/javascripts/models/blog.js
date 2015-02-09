@@ -25,10 +25,12 @@ Grumblr.Models.Blog = Backbone.Model.extend({
   },
 
   follow: function(options){
+    this.set('followed', true)
     this._updateFollow('post', options);
   },
 
   unfollow: function(options){
+    this.set('followed', false);
     this._updateFollow('delete', options);
   },
 

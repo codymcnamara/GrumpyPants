@@ -36,7 +36,7 @@ module Api
 
     def index
       @blogs = Blog.all
-      render json: @blogs
+      render :index
     end
 
     private

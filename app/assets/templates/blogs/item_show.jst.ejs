@@ -2,8 +2,18 @@
   Blog Title: <%= blog.get("title") %>
 </p>
 
+<% if(blog.get("user_id") != Grumblr.currentUser.id){ %>
+  <button
+  data-follow-state="<%= blog.get("followed") === true ? "following" : "unfollowed" %>"
+  class="follow"
+    ><%= blog.get("followed") === true ? "Unfollow" : "Follow" %></button>
+<% } %>
+
 <div class="blog-img">
   <% if (blog.escape("filepicker_url")) { %>
     <img src="<%= blog.escape("filepicker_url") %>" alt="" />
   <% } %>
 </div>
+
+<br>
+<br>

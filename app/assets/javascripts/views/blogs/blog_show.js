@@ -5,7 +5,6 @@ Grumblr.Views.BlogShow = Backbone.CompositeView.extend({
     this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.postCollection, "add", this.addPost);
     this.postCollection.each(this.addPost.bind(this));
-    this.createPostForm();
   },
 
   template: JST['blogs/show'],
@@ -27,15 +26,6 @@ Grumblr.Views.BlogShow = Backbone.CompositeView.extend({
     this.attachSubviews();
 
     return this;
-  },
-
-  createPostForm: function (){
-    var blog_id = this.model.get("id");
-    var postModel = new Grumblr.Models.Post({ blog_id: blog_id});
-    var formView = new Grumblr.Views.PostForm({
-      model: this.model,
-    });
-    this.addSubview('.post-form', formView);
   },
 
   switchFollowStatus: function(event){
