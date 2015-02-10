@@ -14,20 +14,12 @@ Grumblr.Views.PostForm = Backbone.View.extend({
   },
 
   pickFile: function(event){
-    debugger
     event.preventDefault();
-
-    // i could have this._currentPickedFile and then in submit form do
-    // if _this.currerntPickedFile add that to post_url and then at
-    // the end of the submit method, set _currentPickedFile to nil.
     var that = this;
 
     filepicker.pick({container: 'window'}, function(photo){
       that._currentPickedFile = photo.url;
     });
-
-    var derf = "shaloobadibdallofoo";
-
   },
 
   render: function(){
@@ -41,6 +33,7 @@ Grumblr.Views.PostForm = Backbone.View.extend({
     var that = this;
     var formData = $(event.delegateTarget).find('form').serializeJSON().post
     var post = new Grumblr.Models.Post(formData);
+    post.set({ post_url: this._currentPickedFile });
 
     function errors (model, response) {
       $('.errors').empty();
