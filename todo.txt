@@ -1,22 +1,38 @@
 questions:
 
--how can i make my submit post form method less ugly?
+-refactoring
+  -**currentBlog
+    -can i make a currentBlog on blogs collection?
+    -how else can i make my submit post form method less ugly?
+  -toggle logic isn't DRY
 
--for "my blog" nav link can i refactor and make a currentBlog collection method?
+styling:
+  -how do i get glyphicons or little logos for nav bar?
+  -should i put all my css in applicaiton.css file or split it up?
+  - i found Tumblr font (Bookman Old Style Bold) but it's not on google fonts. How do i get it?
+
+-is this a sufficient MVP? any flaws?
+
+-how can i implement reblogging?
 
 -should i have somewhere that says the username always, so user knows who they're logged in as?
-
 -why did the "null: false" for post title let a post without a title save to the db?
--how do i store the currentBlog info, so that it persists like current user? do i have to do some cookie stuff?
+
 
 steps
+
+Tonight:
+  -finish styling on posts show
+    -figure out how to display the pictures
+  -nav
+    -figure out how to make it static and scroll with the page
+  -progresstracker
+  -maybe do sad puppy page?
+
   -Pagination
     -use kaminari for pagination
 
   -Styling:
-    -style blog show view
-    -style nav
-    -style the root/login pages
     -feed show
       -also include blog name somewhere next to the posts
     -create blog

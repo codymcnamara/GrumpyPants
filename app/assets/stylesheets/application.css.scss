@@ -44,6 +44,9 @@ img.blog-img{
   max-width: 50px;
 }
 
+
+// modal
+
 .modal-dialog{
   margin-top: 150px;
 }
@@ -53,9 +56,59 @@ img.blog-img{
 // post show
 
 .post-title{
-  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+
 }
 
 .post-box{
   border: solid;
+  background-color: lightpink;
+  border-radius: 3px;
+}
+
+.post-inner-buffer{
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.total-post{
+  margin-bottom: 30px;
+}
+
+.post-img{
+  // set max width to column boundaries
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+
+// Navigation
+
+.nav-fun{
+  text-align: center;
+}
+
+#nav-box{
+  // border: solid;
+}
+
+#nav{
+  padding-top: 50px;
+}
+
+// top root page
+
+#top-bar{
+  border-bottom: solid;
+  border-color: lightgrey;
+}
+
+#username-display{
+  float: right;
+}
+
+#site-name{
+  font-size: 40px;
 }

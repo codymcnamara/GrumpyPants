@@ -7,10 +7,10 @@ Grumblr.Views.PostForm = Backbone.View.extend({
 
   initialize: function(){
     // add sync lystener for when blogs get fetched
+    // listenTo(Grumblr.blogs, "sync", )
   },
 
   events: {
-    // these events aren't working
     "click .submit": "submit",
     "click .filepicker": "pickFile"
   },
@@ -18,10 +18,16 @@ Grumblr.Views.PostForm = Backbone.View.extend({
   pickFile: function(event){
     debugger
     event.preventDefault();
-    var that = this;
-    filepicker.pick({container: 'window'}, function(photo){
-      that.model.set({ post_url: photo.url})
-    })
+    var currentBlog = Grumblr.blogs.findCurrentBlog();
+
+    // can i call Grumblr.blogs.findCurrentBlog.success?
+
+    if( currentBlog ){
+      filepicker.pick({container: 'window'}, function(photo){
+        currentBlog.set({ post_url: photo.url})
+      })
+    }
+
   },
 
   render: function(){

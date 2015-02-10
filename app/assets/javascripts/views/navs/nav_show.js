@@ -1,7 +1,5 @@
 Grumblr.Views.NavShow = Backbone.View.extend({
-  className: "navbar-header",
-
-  template: JST['navs/show'],
+  template: JST['nav/show'],
 
   events: {
     'click a#logout': "logout",
