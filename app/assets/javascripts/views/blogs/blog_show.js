@@ -15,7 +15,8 @@ Grumblr.Views.BlogShow = Backbone.CompositeView.extend({
 
   addPost: function(post){
     var view = new Grumblr.Views.PostShow({
-      model: post
+      model: post,
+      blog: this.model
     });
     this.addSubview('.blog-posts', view);
   },
@@ -24,7 +25,6 @@ Grumblr.Views.BlogShow = Backbone.CompositeView.extend({
     var temp = this.template({ blog: this.model });
     this.$el.html(temp);
     this.attachSubviews();
-
     return this;
   },
 

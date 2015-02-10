@@ -53,6 +53,10 @@ class User < ActiveRecord::Base
     self.blog.try(:id)
   end
 
+  def blog_pic
+    self.blog.try(:filepicker_url)
+  end
+
   private
 
   def ensure_session_token
