@@ -1,19 +1,23 @@
-<% if current_user.nil? %>
-  <%= link_to "Sign in", new_session_url %> or
-  <%= link_to "Sign up", new_user_url %>
-<% else %>
-  <%= current_user.username %>
+<div class="container-fluid">
 
-  <nav id="nav">
-  </nav>
+  <% if current_user.nil? %>
+    <%= link_to "Sign in", new_session_url %> or
+    <%= link_to "Sign up", new_user_url %>
+  <% else %>
+    <%= current_user.username %>
 
-  <div id="content">
-  </div>
+    <nav id="nav">
+    </nav>
 
-  <script>
-    $(document).ready(function(){
-      Grumblr.currentUser = JSON.parse('<%= current_user.to_json.html_safe %>');
-      Grumblr.initialize();
-    });
-  </script>
-<% end %>
+    <div id="content">
+    </div>
+
+    <script>
+      $(document).ready(function(){
+        Grumblr.currentUser = JSON.parse('<%= current_user.to_json.html_safe %>');
+        Grumblr.initialize();
+      });
+    </script>
+  <% end %>
+
+</div>

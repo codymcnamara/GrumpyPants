@@ -10,11 +10,6 @@ questions:
 -how do i store the currentBlog info, so that it persists like current user? do i have to do some cookie stuff?
 
 steps
-  -default blog pic
-    -rails blog model
-      -after initialize ensure blog pic
-    -scale size of pictures
-
   -Pagination
     -use kaminari for pagination
 
@@ -22,16 +17,20 @@ steps
     -style blog show view
     -style nav
     -style the root/login pages
-    -create modals for the forms
     -feed show
       -also include blog name somewhere next to the posts
+    -create blog
+      -it could also be a modal on top of the all blogs page?
+
+
 
 After MVP
   -good styling
   -seed data
-  -sad puppy page
   -reblogging
+  -sad puppy page
   -search
+  -click handler on blog titles that outputs an soundbite (ex: a baby waah, a sigh, etc ).
   -deleting posts/blogs
   -comments
   -likes
