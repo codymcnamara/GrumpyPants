@@ -18,15 +18,6 @@ Grumblr.Collections.Blogs = Backbone.Collection.extend({
     }
 
     return model;
-  },
-
-  findCurrentBlog: function(){
-    return Grumblr.blogs.fetch({
-      success: function(){
-        return Grumblr.blogs.findWhere({ user_id: Grumblr.currentUser.id})
-        // this could be useful method for refactoring
-      }
-    });
   }
 });
 

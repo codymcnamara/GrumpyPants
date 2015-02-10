@@ -6,8 +6,6 @@ Grumblr.Views.PostForm = Backbone.View.extend({
   template: JST['posts/form'],
 
   initialize: function(){
-    // add sync lystener for when blogs get fetched
-    // listenTo(Grumblr.blogs, "sync", )
   },
 
   events: {
@@ -18,15 +16,17 @@ Grumblr.Views.PostForm = Backbone.View.extend({
   pickFile: function(event){
     debugger
     event.preventDefault();
-    var currentBlog = Grumblr.blogs.findCurrentBlog();
 
-    // can i call Grumblr.blogs.findCurrentBlog.success?
+    // i could have this._currentPickedFile and then in submit form do
+    // if _this.currerntPickedFile add that to post_url and then at
+    // the end of the submit method, set _currentPickedFile to nil.
+    var that = this;
 
-    if( currentBlog ){
-      filepicker.pick({container: 'window'}, function(photo){
-        currentBlog.set({ post_url: photo.url})
-      })
-    }
+    filepicker.pick({container: 'window'}, function(photo){
+      that._currentPickedFile = photo.url;
+    });
+
+    var derf = "shaloobadibdallofoo";
 
   },
 
@@ -51,22 +51,17 @@ Grumblr.Views.PostForm = Backbone.View.extend({
       }.bind(this));
     }
 
-    Grumblr.blogs.fetch({
-      success: function(){
-        var currentBlog = Grumblr.blogs.findWhere({ user_id: Grumblr.currentUser.id})
-        post.set('blog_id', currentBlog.get("id"));
-        post.save({}, {
-          success: function(){
-            currentBlog.posts().add(post, {merge: true});
-            var blogUrl = "#blogs/" + post.get("blog_id")
-            $('#myModal').modal('hide')
-            Backbone.history.navigate(blogUrl, { trigger: true })
-          },
-
-          error: errors.bind(that)
-        });
-      }
+    $('#myModal').one('hidden.bs.modal', function(){
+      post.save({}, {
+        success: function(){
+          Backbone.history.navigate("blogs/" + post.get('blog_id'), { trigger: true })
+        },
+        error: errors.bind(that)
+      });
     });
+
+    $('#myModal').modal('hide');
+    that._currentPickedFile = null;
   }
 
 });

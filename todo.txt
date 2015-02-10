@@ -1,9 +1,14 @@
 questions:
 
+  -screen freezes after i submit a post
+
 -refactoring
   -**currentBlog
     -can i make a currentBlog on blogs collection?
     -how else can i make my submit post form method less ugly?
+    -CJ advice:
+      -when user gets created, automatically create a new blog, now model.save will issue a put request
+        -then you can have Grumblr.blog
   -toggle logic isn't DRY
 
 styling:
@@ -20,13 +25,10 @@ styling:
 
 
 steps
-
-Tonight:
   -finish styling on posts show
     -figure out how to display the pictures
   -nav
     -figure out how to make it static and scroll with the page
-  -progresstracker
   -maybe do sad puppy page?
 
   -Pagination
@@ -38,7 +40,8 @@ Tonight:
     -create blog
       -it could also be a modal on top of the all blogs page?
 
-
+  -random
+    -add links on posts to the that post's blog show page
 
 After MVP
   -good styling

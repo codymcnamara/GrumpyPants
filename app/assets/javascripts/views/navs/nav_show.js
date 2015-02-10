@@ -31,23 +31,12 @@ Grumblr.Views.NavShow = Backbone.View.extend({
     });
 
     $('#myModal').remove();
-    $('#content').append(postFormView.render().$el)
-    $('#myModal').modal()
-  },
-
-  currentBlog: function(){
-    // Blog.where("user_id = '1'").order('created_at DESC')[0]
+    $('#content').append(postFormView.render().$el);
+    $('#myModal').modal();
   },
 
   myBlog: function(event){
     event.preventDefault();
-
-    Grumblr.blogs.fetch({
-      success: function(){
-        var currentBlog = Grumblr.blogs.findWhere({ user_id: Grumblr.currentUser.id})
-        var blogUrl = "#blogs/" + currentBlog.get("id")
-        Backbone.history.navigate("blogs/" + currentBlog.get("id"), { trigger: true })
-      }
-    });
+    Backbone.history.navigate("blogs/" + Grumblr.currentUser.blog_id, {trigger: true});
   }
 });

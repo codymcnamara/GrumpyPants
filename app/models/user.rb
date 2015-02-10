@@ -49,6 +49,10 @@ class User < ActiveRecord::Base
     self.session_token
   end
 
+  def blog_id
+    self.blog.try(:id)
+  end
+
   private
 
   def ensure_session_token

@@ -22,7 +22,7 @@
 
     <script>
       $(document).ready(function(){
-        Grumblr.currentUser = JSON.parse('<%= current_user.to_json.html_safe %>');
+        Grumblr.currentUser = JSON.parse('<%= current_user.to_json({:only => [:id, :email], methods: [:blog_id]}).html_safe %>');
         Grumblr.initialize();
       });
     </script>
