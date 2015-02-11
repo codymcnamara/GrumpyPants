@@ -37,23 +37,24 @@ Grumblr.Views.PostForm = Backbone.View.extend({
 
     function errors (model, response) {
       $('.errors').empty();
+      debugger
       response.responseJSON.forEach(function (el) {
         var li = $('<li></li>');
         li.html(el);
         $('.errors').append(li);
-      }.bind(this));
+      });
     }
 
-    $('#myModal').one('hidden.bs.modal', function(){
+    // $('#myModal').one('hidden.bs.modal', function(){
       post.save({}, {
         success: function(){
           Backbone.history.navigate("blogs/" + post.get('blog_id'), { trigger: true })
+          $('#myModal').modal('hide');
         },
         error: errors.bind(that)
       });
-    });
+    // });
 
-    $('#myModal').modal('hide');
     that._currentPickedFile = null;
   }
 

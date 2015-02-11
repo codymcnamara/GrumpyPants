@@ -35,7 +35,7 @@ Grumblr.Views.BlogForm = Backbone.View.extend({
       }.bind(this));
     }
 
-    var formData = $(event.delegateTarget).serializeJSON().blog;
+    var formData = $(event.delegateTarget).find('form').serializeJSON().blog;
     this.model.set(formData);
     this.model.save({}, {
       success: function(){

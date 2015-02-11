@@ -29,6 +29,7 @@
 // }
 
 
+
 // login pages
 
 .login {
@@ -73,7 +74,19 @@
     padding-top:100px;
 }
 
+.input-blog-title{
+  min-height: 40px;
+  font-size: 20px;
+}
 
+.panel-heading{
+  height: 60px;
+}
+
+.panel-title{
+  font-size: 30px;
+  text-align: center;
+}
 
 // post show
 
@@ -147,6 +160,9 @@
 
 #site-name{
   font-size: 40px;
+  font-family: 'Nunito', sans-serif;
+  // font-family: 'Scada', sans-serif;
+  // font-family: 'Arvo', serif;
 }
 
 // all blogs page
