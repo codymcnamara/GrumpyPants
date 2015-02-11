@@ -2,7 +2,6 @@ class Blog < ActiveRecord::Base
 
   validates :user_id, :title, presence: true
   validates :user_id, uniqueness: true
-  # before_save :ensure_blog_pic
 
   belongs_to :user
   has_many :posts
@@ -17,10 +16,5 @@ class Blog < ActiveRecord::Base
     through: :followings,
     source: :follower
   )
-
-  def ensure_blog_pic
-    # self.filepicker_url ||= image_tag 'dwarf.png'
-    self.filepicker_url ||= 'assets/images/dwarf.png'
-  end
 
 end

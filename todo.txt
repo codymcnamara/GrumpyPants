@@ -1,20 +1,11 @@
 questions:
-  -logos
-    -how do i get glyphicons or little logos for nav bar?
-
-  -should i put all my css in applicaiton.css file or split it up?
-
-  -i found Tumblr font (Bookman Old Style Bold) but it's not on google fonts. How do i get it?
-
-  -how do i get nav bar to not
-
+  -after creating new user and new blog for that user. currentUser.blog_id is nil. however if i force a page refresh it'll show up. I don't know why that's happening. Do i need to force a refresh?
+  -should i not do a grid thing for my posts and nav, since i want it to be unresponsive/fixed?
 
 styling:
   -most important
     -nav bar
-      -icons above each item
-      -border
-      -switch so logout is last
+      -max width and border
   -post show
     -how to style the author name for posts in feed
   -blog show page

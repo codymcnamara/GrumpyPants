@@ -76,13 +76,12 @@ img.blog-img{
 .post-box{
   border: solid;
   background-color: lightpink;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .post-inner-buffer{
   margin-top: 10px;
   margin-bottom: 10px;
-
 }
 
 .total-post{
@@ -106,12 +105,23 @@ img.blog-img{
   text-align: center;
 }
 
-#nav-box{
-  // border: solid;
+.nav-box{
+  border: solid;
+  border-radius: 5px;
+  // min-width: 250px;
+}
+
+.nav-inner-buffer{
+  margin: 15px;
 }
 
 #nav{
   padding-top: 50px;
+}
+
+.glyphicon{
+  font-size: 30px;
+  color: black;
 }
 
 // top root page
