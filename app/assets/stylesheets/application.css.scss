@@ -142,7 +142,18 @@
 
 // all blogs page
 
+.blog-img-all-blogs{
+  max-width: 100%;
+  max-height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.blog-column{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 
 body {padding-top:50px;}
 

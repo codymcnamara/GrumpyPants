@@ -1,10 +1,10 @@
 Grumblr.Views.BlogItemShow = Backbone.View.extend({
   template: JST['blogs/item_show'],
 
-  className: "col-xs-12 col-sm-6 col-md-6 col-lg-6",
+  className: "blog-column col-xs-12 col-sm-6 col-md-6 col-lg-6",
 
   events: {
-    "click button.follow": "switchFollowStatus"
+    "click .btn.follow": "switchFollowStatus"
   },
 
   render: function(){
@@ -14,6 +14,7 @@ Grumblr.Views.BlogItemShow = Backbone.View.extend({
   },
 
   switchFollowStatus: function(event){
+    event.preventDefault();
     var btn = $(event.target);
     if( btn.data("follow-state") === 'unfollowed'){
       this.model.follow({

@@ -21,6 +21,7 @@ styling:
     -button
     -blog title
     -blog pic
+    -add links to blogs for each blog
 
 -refactoring
   -CJ advice:

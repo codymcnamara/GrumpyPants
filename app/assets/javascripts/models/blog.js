@@ -12,7 +12,6 @@ Grumblr.Models.Blog = Backbone.Model.extend({
       url: this._followUrl(),
       method: method,
       success: function(){
-        //maybe we need to add to followings or followers here
         options.btn.data("follow-state", options.followState)
         options.btn.html(options.btnText);
         options.success && options.success();
