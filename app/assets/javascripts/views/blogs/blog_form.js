@@ -42,6 +42,7 @@ Grumblr.Views.BlogForm = Backbone.View.extend({
       success: function(){
         Grumblr.blogs.add(that.model, {merge: true});
         var showUrl = "blogs/" + that.model.get("id").toString()
+        Grumblr.currentUser.blog_id = that.model.get("id")
         Backbone.history.navigate(showUrl, { trigger: true });
       },
 

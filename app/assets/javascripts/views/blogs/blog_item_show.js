@@ -1,6 +1,8 @@
 Grumblr.Views.BlogItemShow = Backbone.View.extend({
   template: JST['blogs/item_show'],
 
+  className: "col-xs-12 col-sm-6 col-md-6 col-lg-6",
+
   events: {
     "click button.follow": "switchFollowStatus"
   },
