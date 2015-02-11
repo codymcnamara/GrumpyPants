@@ -1,27 +1,23 @@
 questions:
   -should i not do a grid thing for my posts and nav, since i want it to be unresponsive/fixed?
+  -what's this top empty space?
 
 styling:
-  -most important
-    -nav bar
-      -max width and border
+  -nav bar
+    -max width and border
   -post show
     -how to style the author name for posts in feed
   -blog show page
-    -follow button
-    -author
-    -display blog pic?
+    -heading/title
+      -follow button
+      -author
+      -display blog pic?
   -login
     -default page is sign in page.
     -make it less ugly
     -maybe have login/signin render same view?
   -NEW BLOG FORM
     -find snippet for cool form
-  -all blogs
-    -button
-    -blog title
-    -blog pic
-    -add links to blogs for each blog
 
 -refactoring
   -CJ advice:

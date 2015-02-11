@@ -1,7 +1,6 @@
 Grumblr.Views.BlogForm = Backbone.View.extend({
 
-  tagName: 'form',
-
+  className: "row vertical-offset-100",
   template: JST['blogs/form'],
 
   events: {
