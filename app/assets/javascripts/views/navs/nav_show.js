@@ -1,6 +1,8 @@
 Grumblr.Views.NavShow = Backbone.View.extend({
   template: JST['nav/show'],
 
+  className: "row nav-fun",
+
   events: {
     'click a#logout': "logout",
     'click a#new-post': "newPost",

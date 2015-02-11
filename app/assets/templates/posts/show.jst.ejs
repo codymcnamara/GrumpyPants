@@ -18,8 +18,15 @@
   <div class="col-md-6">
     <div class="post-box">
       <div class="row post-inner-buffer">
-        <div class="post-title col-sm-10 col-sm-offset-1">
-          <%= post.get("title") %>
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="post-title">
+            <%= post.get("title") %>
+          </div>
+          <div class="author-name">
+            <% if (post.escape("author")) { %>
+                by <%= post.escape("author") %>
+            <% } %>
+          </div>
         </div>
         <div class="col-sm-10 col-sm-offset-1" >
           <% if (post.escape("post_url")) { %>
@@ -32,6 +39,7 @@
             <%= post.escape("body") %>
           </div>
       <% } %>
+
     </div>
   </div>
 

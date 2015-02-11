@@ -1,5 +1,30 @@
 questions:
+  -logos
+    -how do i get glyphicons or little logos for nav bar?
 
+  -should i put all my css in applicaiton.css file or split it up?
+
+  -i found Tumblr font (Bookman Old Style Bold) but it's not on google fonts. How do i get it?
+
+  -how do i get nav bar to not
+
+
+styling:
+  -most important
+    -nav bar
+      -icons above each item
+      -border
+      -switch so logout is last
+  -post show
+    -how to style the author name for posts in feed
+  -blog show page
+    -follow button
+    -author
+    -display blog pic?
+  -login
+    -default page is sign in page.
+    -make it less ugly
+    -maybe have login/signin render same view?
 
 -refactoring
   -CJ advice:
@@ -7,24 +32,12 @@ questions:
       -then you can have Grumblr.blog
   -toggle logic isn't DRY
 
-styling:
-  -how do i get glyphicons or little logos for nav bar?
-  -should i put all my css in applicaiton.css file or split it up?
-  -i found Tumblr font (Bookman Old Style Bold) but it's not on google fonts. How do i get it?
-
--is this a sufficient MVP? any flaws?
-
 -how can i implement reblogging?
 
--should i have somewhere that says the username always, so user knows who they're logged in as?
 -why did the "null: false" for post title let a post without a title save to the db?
 
--where do I find
 
 steps
-  -finish styling on posts show
-    -figure out how to display the pictures
-
   -Pagination
     -use kaminari for pagination
 
@@ -39,6 +52,8 @@ steps
     -decide how to show blog title and blog pic on blog show page
     -could order all blogs by most recent (the same way all the posts are ordered)
 
+
+
 After MVP
   -good styling
   -seed data
@@ -50,22 +65,3 @@ After MVP
   -comments
   -likes
   -multiple blogs per user
-
-
-blog photo
-  -need it on blog show page, all users, my blog, feed
-    -all users
-      -gets blog photo from blogs index jbuilder
-    -my blog & blog show page
-      -gets it from show method
-    -feed
-      -posts index jbuilder
-        -need to add the blog's filepicker_url to this jbuilder
-        -do i need to add @blog or @
-        -how could i pass the feed the right blog model?
-
-  -Should it be user photo or blog photo?
-    -blog photo:
-      -that's how tumblr does it
-    -user photo:
-      -
