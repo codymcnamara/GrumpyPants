@@ -1,9 +1,5 @@
 <div class="errythang container-fluid">
 
-  <% if current_user.nil? %>
-    <%= link_to "Sign in", new_session_url %> or
-    <%= link_to "Sign up", new_user_url %>
-  <% else %>
     <div id="top-bar">
       <div id="username-display">
         <%= current_user.username %>
@@ -26,6 +22,5 @@
         Grumblr.initialize();
       });
     </script>
-  <% end %>
 
 </div>

@@ -1,7 +1,7 @@
 questions:
+  - what's this top empty space?
   - should i not do a grid thing for my posts and nav, since i want it to be unresponsive/fixed?
 
-  - what's this top empty space?
 
 styling:
   - nav bar
@@ -9,6 +9,8 @@ styling:
       -tumblr uses 540px width
   - post show
     - how to style the author name for posts in feed
+  - post form
+    - bootstrap horizontal form
   - blog show page
     - heading/title
       - follow button
@@ -18,13 +20,11 @@ styling:
     - default page is sign in page.
     - make it less ugly
     - maybe have login/signin render same view?
-  - NEW BLOG FORM
-    - find snippet for cool form
+    - top right corner linking
+  - blog form
+    - make it a modal
 
 - refactoring
-  - CJ advice:
-    - when user gets created, automatically create a new blog, now model.save will issue a put request
-      - then you can have Grumblr.blog
   - toggle logic isn't DRY
 
 - how can i implement reblogging?
@@ -43,7 +43,8 @@ steps
       - it could also be a modal on top of the all blogs page?
 
   - random
-    - add links on posts to the that post's blog show page
+    - Feed
+      - add links on posts to the that post's blog show page
     - decide how to show blog title and blog pic on blog show page
     - could order all blogs by most recent (the same way all the posts are ordered)
 
