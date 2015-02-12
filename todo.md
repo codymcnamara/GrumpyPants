@@ -7,8 +7,6 @@ questions:
 styling:
   - push app to heroku and make sure everything works
 
-  - pagination
-
   - blog show page
     - heading/title
       - follow button

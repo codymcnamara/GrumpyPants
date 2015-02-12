@@ -29,6 +29,15 @@
 // }
 
 // blog show
+.inner-nav-option > .nav-icon{
+  margin-top: 0px;
+  transition: margin 0.15s linear;
+}
+
+.inner-nav-option:hover > .nav-icon{
+  margin-top: -5px;
+  margin-bottom: 20px;
+}
 
 .blog-heading-info{
   min-height: 100px;

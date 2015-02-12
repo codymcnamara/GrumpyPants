@@ -6,7 +6,8 @@ Grumblr.Views.NavShow = Backbone.View.extend({
   events: {
     'click a#logout': "logout",
     'click a#new-post': "newPost",
-    'click a#my-blog': 'myBlog'
+    'click a#my-blog': 'myBlog',
+    'click .nav-icon': "bounceIcon"
   },
 
   render: function(){
