@@ -1,23 +1,21 @@
 <div class="post-box-left">
-  <!-- <div class="blog-info-for-post"> -->
+  
+  <div class="blog-pic-for-post">
+    <% if (blog && blog.escape("filepicker_url")) { %>
+      <img src="<%= blog.escape("filepicker_url") %>"
+      class="blog-img img-rounded" alt="" />
+    <% } else if (post.escape("image_url")) { %>
+      <img src="<%= post.escape("image_url") %>"
+      class="blog-img img-rounded" alt="" />
+    <% } %>
+  </div>
 
-    <div class="blog-pic-for-post">
-      <% if (blog && blog.escape("filepicker_url")) { %>
-        <img src="<%= blog.escape("filepicker_url") %>"
-        class="blog-img img-rounded" alt="" />
-      <% } else if (post.escape("image_url")) { %>
-        <img src="<%= post.escape("image_url") %>"
-        class="blog-img img-rounded" alt="" />
-      <% } %>
-    </div>
+  <div class="blog-author">
+    <% if (post.escape("author")) { %>
+        by <%= post.escape("author") %>
+    <% } %>
+  </div>
 
-    <div class="blog-author">
-      <% if (post.escape("author")) { %>
-          by <%= post.escape("author") %>
-      <% } %>
-    </div>
-
-  <!-- </div> -->
 </div>
 
 <div class="post-box-right">

@@ -1,16 +1,57 @@
-<!-- <% if (blog.escape("filepicker_url")) { %>
-  <img src="<%= blog.escape("filepicker_url") %>" alt="" />
-<% } %> -->
+<div class="blog-heading-info">
 
-<strong>Blog Title: <%= blog.get("title") %></strong>
+  <div class="blog-inner-box">
+    <div class="blog-title">
+      <strong><%= blog.get("title") %></strong>
+    </div>
+
+    <div class="blog-author-show">
+      <%= blog.escape("author") %>
+    </div>
 
 
-<% if(blog.get("user_id") != Grumblr.currentUser.id){ %>
-  <button
-  data-follow-state="<%= blog.get("followed") === true ? "following" : "unfollowed" %>"
-  class="follow"
-    ><%= blog.get("followed") === true ? "Unfollow" : "Follow" %></button>
-<% } %>
+    <div class="follow-button">
+      <% if(blog.get("user_id") != Grumblr.currentUser.id){ %>
+        <button
+        data-follow-state="<%= blog.get("followed") === true ? "following" : "unfollowed" %>"
+        class="follow"
+          ><%= blog.get("followed") === true ? "Unfollow" : "Follow" %></button>
+      <% } %>
+    </div>
+  </div>
+
+  <!-- <div class="blog-backdrop">
+    <div class="blog-profile-pic-box">
+      <% if (blog.escape("filepicker_url")) { %>
+        <img src="<%= blog.escape("filepicker_url") %>" class="blog-profile-pic" />
+      <% } %>
+    </div>
+  </div>
+
+  <div class="blog-lower-rectangle">
+    <div class="blog-words">
+
+      <div class="blog-title">
+        <strong><%= blog.get("title") %></strong>
+      </div>
+
+      <div class="blog-author-show">
+        <%= blog.escape("author") %>
+      </div>
+
+    </div>
+
+    <div class="follow-button">
+      <% if(blog.get("user_id") != Grumblr.currentUser.id){ %>
+        <button
+        data-follow-state="<%= blog.get("followed") === true ? "following" : "unfollowed" %>"
+        class="follow"
+          ><%= blog.get("followed") === true ? "Unfollow" : "Follow" %></button>
+      <% } %>
+    </div>
+  </div> -->
+
+</div>
 
 
 <div class="blog-posts">

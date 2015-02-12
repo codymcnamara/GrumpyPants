@@ -12,7 +12,8 @@ module Api
     end
 
     def index
-      @posts = current_user.feed_posts.includes(:blog)
+      @posts = current_user.feed_posts.includes(:blog).page(params[:page])
+      @page = params[:page]
       render :index
     end
 

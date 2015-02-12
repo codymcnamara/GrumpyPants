@@ -11,11 +11,11 @@ Grumblr.Routers.Router = Backbone.Router.extend({
   },
 
   new: function(){
-    // redirect if user already has a blog
     var that = this;
     Grumblr.blogs.fetch({
       success: function(){
         var currentBlog = Grumblr.blogs.findWhere({ user_id: Grumblr.currentUser.id})
+        // redirect if user already has a blog
         if(currentBlog){
           Backbone.history.navigate('#/feed');
         } else {
@@ -40,7 +40,10 @@ Grumblr.Routers.Router = Backbone.Router.extend({
   },
 
   feed: function(){
-    Grumblr.feed.fetch();
+    Grumblr.feed.fetch({
+      remove: false, // merge this page with the rest of the collection
+      data: { page: 1 }
+    });
     var feedView = new Grumblr.Views.FeedShow({
       collection: Grumblr.feed
     });

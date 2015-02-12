@@ -28,7 +28,42 @@
 //   background-color: #35465c;
 // }
 
+// blog show
 
+.blog-heading-info{
+  min-height: 100px;
+  width: 700px;
+  margin: 0 auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.blog-title{
+  font-size: 50px;
+
+}
+
+.blog-author-show{
+  font-size: 15px;
+}
+
+.blog-inner-box{
+  margin: 30px;
+}
+
+.follow-button{
+  // float: right;
+}
+
+// .blog-profile-pic-box{
+//   height: 100px;
+//   width: 100px;
+//   border: solid;
+// }
+//
+// .blog-profile-pic{
+//   width: 100%;
+// }
 
 // login pages
 
@@ -92,7 +127,7 @@
 .post-show-container{
   min-height: 110px;
   width: 700px;
-  margin: 0 auto 30px;
+  margin: 0 auto;
 }
 
 .blog-info-for-post{
@@ -110,7 +145,7 @@
   width: 600px;
   background-color: lightblue;
   border-radius: 5px;
-
+  margin-bottom: 26px;
 }
 
 .blog-author{
@@ -173,7 +208,8 @@
 }
 
 #nav{
-  padding-top: 50px;
+  padding-top: 25px;
+  padding-bottom:25px;
 }
 
 .glyphicon{

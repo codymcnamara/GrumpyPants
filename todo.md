@@ -1,12 +1,11 @@
 questions:
+  - pagination
+    - scroll won't work
+    -
 
 
 styling:
-  - post show
-    - how to style the author name for posts in feed
-
-  - post form
-    - bootstrap horizontal form
+  - push app to heroku and make sure everything works
 
   - pagination
 
@@ -15,17 +14,26 @@ styling:
       - follow button
       - author
       - display blog pic?
+
   - login
-    - use one fo the snippetss
+    - use one fo the snippets
     - default page is sign in page.
     - make it less ugly
     - maybe have login/signin render same view?
-    - top right corner linking
+    - top right corner link
 
   - blog form
     - make it a modal
+
   - nav
     - add links to icons
+    - make buttons move
+
+  - post form
+    - bootstrap horizontal form
+
+  - all blogs
+    - fix all blogs page
 
 
 - refactoring
@@ -38,13 +46,7 @@ styling:
 
 steps
   - Pagination
-    - use kaminari for pagination
-
-  - Styling:
-    - feed show
-      - also include blog name somewhere next to the posts
-    - create blog
-      - it could also be a modal on top of the all blogs page?
+    - for all blogs page and blog show
 
   - Random
     - Feed
