@@ -5,6 +5,8 @@ Grumblr.Views.PostShow = Backbone.View.extend({
     this.listenTo(this.model, "sync", this.render);
   },
 
+  className: "post-show-container",
+
   template: JST['posts/show'],
 
   render: function(){

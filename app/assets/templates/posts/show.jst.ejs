@@ -1,46 +1,41 @@
-<div class="row total-post">
-  <div class="col-md-3">
-    <div class="row">
-      <div class="col-sm-4 col-md-offset-8">
-        <div>
-          <% if (blog && blog.escape("filepicker_url")) { %>
-            <img src="<%= blog.escape("filepicker_url") %>"
-            class="blog-img img-rounded" alt="" />
-          <% } else if (post.escape("image_url")) { %>
-            <img src="<%= post.escape("image_url") %>"
-            class="blog-img img-rounded" alt="" />
-          <% } %>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="post-box-left">
+  <!-- <div class="blog-info-for-post"> -->
 
-  <div class="col-md-6">
-    <div class="post-box">
-      <div class="row post-inner-buffer">
-        <div class="col-sm-10 col-sm-offset-1">
-          <div class="post-title">
-            <%= post.get("title") %>
-          </div>
-          <div class="author-name">
-            <% if (post.escape("author")) { %>
-                by <%= post.escape("author") %>
-            <% } %>
-          </div>
-        </div>
-        <div class="col-sm-10 col-sm-offset-1" >
-          <% if (post.escape("post_url")) { %>
-            <img src="<%= post.escape("post_url") %>" alt=""
-            class=" post-img img-rounded img-responsive"/>
-          <% } %>
-        </div>
-      <% if (post.escape("body")) { %>
-          <div class="col-sm-10 col-sm-offset-1">
-            <%= post.escape("body") %>
-          </div>
+    <div class="blog-pic-for-post">
+      <% if (blog && blog.escape("filepicker_url")) { %>
+        <img src="<%= blog.escape("filepicker_url") %>"
+        class="blog-img img-rounded" alt="" />
+      <% } else if (post.escape("image_url")) { %>
+        <img src="<%= post.escape("image_url") %>"
+        class="blog-img img-rounded" alt="" />
       <% } %>
+    </div>
 
+    <div class="blog-author">
+      <% if (post.escape("author")) { %>
+          by <%= post.escape("author") %>
+      <% } %>
+    </div>
+
+  <!-- </div> -->
+</div>
+
+<div class="post-box-right">
+  <div class="post-inner-box">
+    <div class="post-title">
+      <%= post.get("title") %>
+    </div>
+    <div class="post-pic">
+      <% if (post.escape("post_url")) { %>
+        <img src="<%= post.escape("post_url") %>" alt=""
+        class=" post-img img-rounded img-responsive"/>
+      <% } %>
+    </div>
+
+    <div class="post-body">
+      <% if (post.escape("body")) { %>
+        <%= post.escape("body") %>
+      <% } %>
     </div>
   </div>
-
 </div>
