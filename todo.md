@@ -1,12 +1,7 @@
 questions:
-  - pagination
-    - scroll won't work
-    -
 
 
 styling:
-  - push app to heroku and make sure everything works
-
   - blog show page
     - heading/title
       - follow button
@@ -23,24 +18,11 @@ styling:
   - blog form
     - make it a modal
 
-  - nav
-    - add links to icons
-    - make buttons move
-
   - post form
     - bootstrap horizontal form
 
   - all blogs
     - fix all blogs page
-
-
-- refactoring
-  - toggle logic isn't DRY
-
-- how can i implement reblogging?
-
-- why did the "null: false" for post title let a post without a title save to the db?
-
 
 steps
   - Pagination
@@ -52,7 +34,8 @@ steps
     - decide how to show blog title and blog pic on blog show page
     - could order all blogs by most recent (the same way all the posts are ordered)
 
-
+fun styling
+  -have the blog pic box drag with the photo, like ti does in tumblr
 
 After MVP
   - good styling

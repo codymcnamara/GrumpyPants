@@ -7,13 +7,25 @@ Grumblr.Views.NavShow = Backbone.View.extend({
     'click a#logout': "logout",
     'click a#new-post': "newPost",
     'click a#my-blog': 'myBlog',
-    'click .nav-icon': "bounceIcon"
+    'click .glyphicon-user': 'myBlog',
+    'click .glyphicon-th': 'allUsers',
+    'click .glyphicon-pencil': 'newPost',
+    'click .glyphicon-off': 'logout',
+    'click .glyphicon-home': 'goToFeed',
   },
 
   render: function(){
     var temp = this.template();
     this.$el.html(temp);
     return this;
+  },
+
+  allUsers: function(){
+    Backbone.history.navigate("#allblogs", {trigger: true});
+  },
+
+  goToFeed: function(){
+    Backbone.history.navigate("#feed", {trigger: true});
   },
 
   logout: function(event){

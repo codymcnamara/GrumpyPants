@@ -29,15 +29,7 @@
 // }
 
 // blog show
-.inner-nav-option > .nav-icon{
-  margin-top: 0px;
-  transition: margin 0.15s linear;
-}
 
-.inner-nav-option:hover > .nav-icon{
-  margin-top: -5px;
-  margin-bottom: 20px;
-}
 
 .blog-heading-info{
   min-height: 100px;
@@ -74,31 +66,110 @@
 //   width: 100%;
 // }
 
+
+// bootlogin
+//
+// .form-signin input[type="text"] {
+//     margin-bottom: 5px;
+//     border-bottom-left-radius: 0;
+//     border-bottom-right-radius: 0;
+// }
+//
+// .form-signin input[type="password"] {
+//     margin-bottom: 10px;
+//     border-top-left-radius: 0;
+//     border-top-right-radius: 0;
+// }
+//
+.form-control {
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+}
+
+
+
 // login pages
 
-.login {
-  display: table;
-  height: auto;
-  text-align: center;
-  width: 400px;
-  // margin: 0 auto;
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-  border-style: solid;
-  border-color: grey;
-}
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  opacity: 0.8;
 
-.input-block-level {
-  display: block;
+  /* Set up proportionate scaling */
   width: 100%;
-  min-height: 40px;        // Make inputs at least the height of their button counterpart
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-.inner-login{
-  width: 300px;
-  margin: 0 auto;
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
 }
+.web-title{
+  // text-align: center;
+  font-size: 75px;
+}
+
+.site-description{
+  // text-align: center;
+  font-size: 20px;
+}
+
+.form-container{
+  padding-top:30px;
+}
+
+.login-container{
+  margin-top: 15%;
+  text-align: center;
+  // border: 1px solid black;
+  border-color: black;
+  color: white;
+  // background: rgba(200, 191, 195, .7);
+  // opacity: 0.7;
+  text-shadow: 2px 2px grey;
+
+}
+
+.subtitle-span{
+  margin-right: 30px;
+}
+
+.subtitle-description{
+  margin-top: 20px;
+}
+
+// .login {
+//   display: table;
+//   height: auto;
+//   text-align: center;
+//   width: 400px;
+//   // margin: 0 auto;
+//   margin: auto;
+//   position: absolute;
+//   top: 0; left: 0; bottom: 0; right: 0;
+//   border-style: solid;
+//   border-color: grey;
+// }
+//
+// .input-block-level {
+//   display: block;
+//   width: 100%;
+//   min-height: 40px;        // Make inputs at least the height of their button counterpart
+// }
+//
+// .inner-login{
+//   width: 300px;
+//   margin: 0 auto;
+// }
 
 // img.blog-img{
 //   max-height: 50px;
@@ -188,7 +259,15 @@
 
 
 // Navigation
+.inner-nav-option > .nav-icon{
+  margin-top: 0px;
+  transition: margin 0.15s linear;
+}
 
+.inner-nav-option:hover > .nav-icon{
+  margin-top: -5px;
+  margin-bottom: 20px;
+}
 .nav-fun{
   height: 100px;
   margin-left: auto;
