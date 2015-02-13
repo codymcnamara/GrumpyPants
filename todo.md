@@ -1,11 +1,16 @@
 questions:
+  - ordering won't work again
+  - 
 
+  - can't space out input boxes
+  - login button won't show up
 
 styling:
   - login
     - maybe have login/signin render same view?
     - top right corner button
     - space out subtitle
+    - doesn't display error
 
   - apply fonts
 
@@ -14,6 +19,9 @@ styling:
 
   - guest login
 
+  - error messages
+    - login/new user don't display them at all
+    -
 
   - all blogs
     - fix all blogs page
@@ -29,6 +37,8 @@ styling:
 
   - extra
     - could order all blogs by most recent (the same way all the posts are ordered)
+
+    - add shadow to post show blog pic
 
 steps
 

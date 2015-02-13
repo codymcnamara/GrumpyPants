@@ -1,6 +1,11 @@
-<div class="login-signup-button">
-
+<div class="row">
+  <div class="col-md-2 col-md-10-offset">
+    <div class="login-signup-button">
+      <a href="users/new" class="btn btn-lg">Sign up</a>
+    </div>
+  </div>
 </div>
+
 
 <img class="bg" src="http://fc00.deviantart.net/fs70/i/2011/204/7/f/rain_over_window_by_kurodot-d41dh9d.jpg" alt="" />
 
@@ -13,11 +18,11 @@
   </div>
 
   <div class="row site-description">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-6 col-md-offset-3 site-description-first-line">
       A Tumblr clone exclusively for complaining.
     </div>
-    <div class="row subtitle-description">
-      <div class="col-md-6 col-md-offset-3">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 subtitle-description">
         <span class="subtitle-span">It's okay.</span> <span>Let it out :)</span>
       </div>
     </div>
@@ -33,16 +38,23 @@
             value="<%= form_authenticity_token %>">
 
           <div class="form-group">
-            <input type="text" name="user[username]" class="form-control"
-            id="user_username" placeholder="username">
+            <input type="text"
+                  name="user[username]"
+                  id="user_username"
+                  placeholder="username"
+                  class="form-control">
           </div>
 
           <div class="form-group">
-            <input type="password" name="user[password]" class="form-control"
-            id="user_password" placeholder="password">
+            <input type="password"
+                  name="user[password]"
+                  class="form-control"
+                  id="user_password"
+                  placeholder="password">
           </div>
 
           <input class="btn btn-lg btn-success btn-block" type="submit" id="login" value="Login »">
+
         </form>
       </div>
   </div>

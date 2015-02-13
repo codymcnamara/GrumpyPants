@@ -93,31 +93,7 @@ html, body {
   background-color: #57a544;
 }
 
-// .blog-profile-pic-box{
-//   height: 100px;
-//   width: 100px;
-//   border: solid;
-// }
-//
-// .blog-profile-pic{
-//   width: 100%;
-// }
 
-
-// bootlogin
-//
-// .form-signin input[type="text"] {
-//     margin-bottom: 5px;
-//     border-bottom-left-radius: 0;
-//     border-bottom-right-radius: 0;
-// }
-//
-// .form-signin input[type="password"] {
-//     margin-bottom: 10px;
-//     border-top-left-radius: 0;
-//     border-top-right-radius: 0;
-// }
-//
 .form-control {
   font-size: 16px;
   height: auto;
@@ -132,7 +108,7 @@ img.bg {
   /* Set rules to fill background */
   min-height: 100%;
   min-width: 1024px;
-  opacity: 0.8;
+  // opacity: 0.9;
 
   /* Set up proportionate scaling */
   width: 100%;
@@ -153,11 +129,14 @@ img.bg {
 .web-title{
   // text-align: center;
   font-size: 75px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .site-description{
   // text-align: center;
   font-size: 20px;
+  font-family: 'Nunito', sans-serif;
+
 }
 
 .form-container{
@@ -180,8 +159,16 @@ img.bg {
   margin-right: 30px;
 }
 
-.subtitle-description{
-  margin-top: 20px;
+.site-description-first-line{
+  min-height: 50px;
+}
+
+.new-user-input{
+  padding-bottom: 30px;
+}
+
+.login-signup-button{
+  // background-color: white;
 }
 
 // .login {
