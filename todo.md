@@ -1,18 +1,11 @@
 questions:
-  - ordering won't work again
-    - blog show pages
-      - refresh -> it's most recent first
-    - feed
-      - i think it's
-    - my blog
-      - when i write a post it goes to the bottom
-      - after refreshing it's in correct order
+  - newly created post shows up at bottom of page
 
-  - can't space out input boxes on login
-  - moment (js)
+
+  - when writing new post from "my blog" page, the modal won't close automatically or add to hte page automatically. however if you navigate away and back (within backbone or refresh) it'll be there
+  - writing from "all users" page it redirects to my blog, but post is at the bottom. 
 
 styling:
-  - apply fonts
 
   - Seed Data
     - https://github.com/rroblak/seed_dump
@@ -27,6 +20,9 @@ styling:
   - Feed
     - add links on posts to the that post's blog show page
 
+
+  - nav
+    - scrolling over text vs glyphicon is different. make text not link to solve this
 
   - all blogs
     - fix all blogs page
@@ -45,6 +41,7 @@ steps
   - Pagination
     - for all blogs page and blog show
 
+    - set up thing so heroku fast,
 
 fun styling
   -have the blog pic box drag with the photo, like ti does in tumblr

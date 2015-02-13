@@ -5,9 +5,6 @@ Grumblr.Views.PostForm = Backbone.View.extend({
 
   template: JST['posts/form'],
 
-  initialize: function(){
-  },
-
   events: {
     "click .submit": "submit",
     "click .filepicker": "pickFile"
@@ -45,14 +42,14 @@ Grumblr.Views.PostForm = Backbone.View.extend({
       });
     }
 
-    // $('#myModal').one('hidden.bs.modal', function(){
-      post.save({}, {
-        success: function(){
-          Backbone.history.navigate("blogs/" + post.get('blog_id'), { trigger: true })
-        },
-        error: errors.bind(that)
-      });
-    // });
+    post.save({}, {
+      success: function(){
+        that.model.posts().add(post, {new: true})
+        Backbone.history.navigate("blogs/" + post.get('blog_id'), { trigger: true })
+        that.remove();
+      },
+      error: errors.bind(that)
+    });
 
     that._currentPickedFile = null;
   }

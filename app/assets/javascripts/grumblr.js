@@ -12,7 +12,7 @@ window.Grumblr = {
 
   initializeNav: function(){
     var $navEl = $('#nav')
-    var navView = new Grumblr.Views.NavShow()
+    var navView = new Grumblr.Views.NavShow();
     $navEl.html(navView.render().$el);
   }
 };

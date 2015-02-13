@@ -13,12 +13,30 @@ Grumblr.Views.BlogShow = Backbone.CompositeView.extend({
     "click button.follow": "switchFollowStatus"
   },
 
-  addPost: function(post){
+  addPost: function (post, collection, options) {
+    if (options.new) {
+      console.log('prepend')
+      this.prependPost(post);
+    } else {
+      console.log('append')
+      this.appendPost(post);
+    }
+  },
+
+  appendPost: function(post){
     var view = new Grumblr.Views.PostShow({
       model: post,
       blog: this.model
     });
     this.addSubview('.blog-posts', view);
+  },
+
+  prependPost: function (post) {
+    var view = new Grumblr.Views.PostShow({
+      model: post,
+      blog: this.model
+    });
+    this.prependSubview('.blog-posts', view);
   },
 
   render: function(){

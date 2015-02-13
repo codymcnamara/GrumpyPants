@@ -41,8 +41,9 @@ Grumblr.Views.NavShow = Backbone.View.extend({
   },
 
   newPost: function(){
+    var blog = Grumblr.blogs.getOrFetch(Grumblr.currentUser.blog_id);
     var postFormView = new Grumblr.Views.PostForm({
-      model: this.model,
+      model: blog
     });
 
     $('#myModal').remove();

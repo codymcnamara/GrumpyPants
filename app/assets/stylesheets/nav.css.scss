@@ -1,0 +1,82 @@
+// Navigation
+
+.inner-nav-option > .nav-icon{
+  margin-top: 0px;
+  transition: margin 0.15s linear;
+}
+
+.inner-nav-option:hover > .nav-icon{
+  margin-top: -5px;
+  margin-bottom: 20px;
+}
+.nav-fun{
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-box{
+  width: 700px;
+  height: 90px;
+  display: block;
+  display: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-inner-buffer{
+  margin: 15px;
+}
+
+.inner-nav-option{
+  float: left;
+  // margin: 10px;
+  width: 16%;
+  text-align: center;
+}
+
+#nav{
+  padding-top: 25px;
+  padding-bottom:25px;
+}
+
+.glyphicon{
+  font-size: 50px;
+  color: white;
+}
+
+.nav-icon{
+  margin: 15px auto;
+  width: 50px;
+  height: 50px;
+}
+
+a#nav{
+  margin: auto;
+  width: 50%;
+  margin-top: 10px;
+}
+
+a{
+  font-size: 20px;
+  color: white;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+a:link{
+  border-bottom: none;
+  text-decoration: none;
+}
+
+a:visited{
+  color: white;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+a:hover{
+  color: white;
+  border-bottom: none;
+  text-decoration: none;
+}

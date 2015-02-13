@@ -180,35 +180,6 @@ img.bg {
   margin-top: 20px;
 }
 
-// .login {
-//   display: table;
-//   height: auto;
-//   text-align: center;
-//   width: 400px;
-//   // margin: 0 auto;
-//   margin: auto;
-//   position: absolute;
-//   top: 0; left: 0; bottom: 0; right: 0;
-//   border-style: solid;
-//   border-color: grey;
-// }
-//
-// .input-block-level {
-//   display: block;
-//   width: 100%;
-//   min-height: 40px;        // Make inputs at least the height of their button counterpart
-// }
-//
-// .inner-login{
-//   width: 300px;
-//   margin: 0 auto;
-// }
-
-// img.blog-img{
-//   max-height: 50px;
-//   max-width: 50px;
-// }
-
 
 // modal
 
@@ -299,82 +270,6 @@ img.bg {
   max-width: 100%;
 }
 
-
-// Navigation
-.inner-nav-option > .nav-icon{
-  margin-top: 0px;
-  transition: margin 0.15s linear;
-}
-
-.inner-nav-option:hover > .nav-icon{
-  margin-top: -5px;
-  margin-bottom: 20px;
-}
-.nav-fun{
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-
-}
-
-.nav-box{
-  width: 700px;
-  height: 90px;
-  display: block;
-  display: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.nav-inner-buffer{
-  margin: 15px;
-}
-
-.inner-nav-option{
-  float: left;
-  // margin: 10px;
-  width: 16%;
-  text-align: center;
-}
-
-#nav{
-  padding-top: 25px;
-  padding-bottom:25px;
-}
-
-.glyphicon{
-  font-size: 50px;
-  color: white;
-}
-
-.nav-icon{
-  margin: 15px auto;
-  width: 50px;
-  height: 50px;
-}
-
-a#nav{
-  margin: auto;
-  width: 50%;
-  margin-top: 10px;
-}
-
-a{
-  font-size: 20px;
-  color: white;
-}
-
-a:hover{
-  color: white;
-  border-bottom: none;
-  text-decoration: none;
-}
-
-a:active{
-  color: grey;
-  border-bottom: none;
-  text-decoration: none;
-}
 
 // top root page
 
