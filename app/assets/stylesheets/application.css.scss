@@ -24,9 +24,16 @@
 
 // General
 
-// .errythang{
-//   background-color: #35465c;
-// }
+html, body {
+  height: 100%;
+}
+
+.everything{
+  // background-color: #35465c; //this is Tumblr's
+  // background-color: lightblue;
+  background-color: cornflowerblue;
+  min-height: 100%;
+}
 
 // blog show
 
@@ -221,11 +228,11 @@ img.bg {
 
 .post-box-right{
   float: left;
-  border: solid;
   width: 600px;
-  background-color: lightblue;
+  background-color: white;
   border-radius: 5px;
   margin-bottom: 26px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .blog-author{
@@ -302,7 +309,7 @@ img.bg {
 
 .glyphicon{
   font-size: 50px;
-  color: black;
+  color: white;
 }
 
 .nav-icon{
@@ -315,6 +322,23 @@ a#nav{
   margin: auto;
   width: 50%;
   margin-top: 10px;
+}
+
+a{
+  font-size: 20px;
+  color: white;
+}
+
+a:hover{
+  color: white;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+a:active{
+  color: grey;
+  border-bottom: none;
+  text-decoration: none;
 }
 
 // top root page
@@ -359,6 +383,7 @@ a#nav{
     text-align: right;
     display: block;
     margin-top: 60px;
+    background-color: white;
 }
 .box-icon {
     background-color: #57a544;

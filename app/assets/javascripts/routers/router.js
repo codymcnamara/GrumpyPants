@@ -28,6 +28,9 @@ Grumblr.Routers.Router = Backbone.Router.extend({
   },
 
   show: function(id){
+    $('#myModal').modal('hide');
+    $( 'body' ).removeClass( "modal-open" );
+    $('body').css('padding', '0');
     var showModel = Grumblr.blogs.getOrFetch(id);
     var showView = new Grumblr.Views.BlogShow ( { model: showModel });
     this._swapView(showView);
