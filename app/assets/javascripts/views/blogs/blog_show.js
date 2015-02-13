@@ -15,10 +15,10 @@ Grumblr.Views.BlogShow = Backbone.CompositeView.extend({
 
   addPost: function (post, collection, options) {
     if (options.new) {
-      console.log('prepend')
+      ('prepend')
       this.prependPost(post);
     } else {
-      console.log('append')
+      ('append')
       this.appendPost(post);
     }
   },

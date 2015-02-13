@@ -46,7 +46,7 @@ Grumblr.Views.PostForm = Backbone.View.extend({
       success: function(){
         that.model.posts().add(post, {new: true})
         Backbone.history.navigate("blogs/" + post.get('blog_id'), { trigger: true })
-        that.remove();
+        $('#myModal').modal('hide');
       },
       error: errors.bind(that)
     });
