@@ -35,5 +35,8 @@
         <%= post.escape("body") %>
       <% } %>
     </div>
+    <div class="post-time-stamp">
+      <%= moment(post.get('created_at')).fromNow() %>
+    </div>
   </div>
 </div>

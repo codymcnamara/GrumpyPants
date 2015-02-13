@@ -12,7 +12,7 @@ module Api
     end
 
     def index
-      @posts = current_user.feed_posts.includes(:blog).page(params[:page]).per(15)
+      @posts = current_user.feed_posts.includes(:blog).page(params[:page]).per(15).order("created_at DESC")
       @page = params[:page]
       render :index
     end

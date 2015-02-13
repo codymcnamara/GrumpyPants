@@ -1,8 +1,13 @@
-<div class="login-signup-button">
-  <%= button_to "Login", new_session_url %>
+<img class="bg" src="http://fc00.deviantart.net/fs70/i/2011/204/7/f/rain_over_window_by_kurodot-d41dh9d.jpg" alt="" />
+
+<div class="row">
+  <div class="col-md-2 col-md-offset-10">
+    <div class="login-signup-button">
+      <a href="/session/new" class="btn btn-lg btn-success">Login</a>
+    </div>
+  </div>
 </div>
 
-<img class="bg" src="http://fc00.deviantart.net/fs70/i/2011/204/7/f/rain_over_window_by_kurodot-d41dh9d.jpg" alt="" />
 
 <%= render "shared/errors" %>
 
@@ -15,9 +20,6 @@
   </div>
 
   <div class="row site-description">
-    <div class="col-md-6 col-md-offset-3 site-description-first-line">
-      A Tumblr clone exclusively for complaining.
-    </div>
     <div class="row">
       <div class="col-md-6 col-md-offset-3 subtitle-description">
         <span class="subtitle-span">It's okay.</span> <span>You're here :)</span>
@@ -26,43 +28,40 @@
   </div>
 
   <div class="row form-container">
-      <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-        <form action="<%= users_url %>" method="post">
-          <input
-            type="hidden"
-            name="authenticity_token"
-            value="<%= form_authenticity_token %>">
+    <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+      <form action="<%= users_url %>" method="post">
+        <input
+        type="hidden"
+        name="authenticity_token"
+        value="<%= form_authenticity_token %>">
 
-          <div class="form-group new-user-input">
-            <input type="text"
-                   name="user[username]"
-                   id="user_username"
-                   placeholder="username"
-                   class="form-control">
-          <div>
+        <div class="form-group new-user-input">
+          <input type="text"
+          name="user[username]"
+          id="user_username"
+          placeholder="username"
+          class="form-control">
+        </div>
+        <div class="form-group new-user-input">
+          <input type="text"
+          name="user[email]"
+          id="user_email"
+          placeholder="email"
+          class="form-control">
+        </div>
+        <div class="form-group new-user-input">
+          <input type="password"
+          name="user[password]"
+          id="user_password"
+          placeholder="password"
+          class="form-control">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-lg btn-success btn-block">Create User</button>
+        </div>
 
-          <div class="form-group new-user-input">
-            <input type="text"
-                   name="user[email]"
-                   id="user_email"
-                   placeholder="email"
-                   class="form-control">
-          <div>
-
-          <div class="form-group new-user-input">
-            <input type="password"
-                   name="user[password]"
-                   id="user_password"
-                   placeholder="password"
-                   class="form-control">
-          <div>
-
-          <div class="form-group">
-            <button type="submit" class="btn btn-lg btn-success btn-block">Create User</button>
-          </div>
-
-        </form>
-      </div>
+      </form>
+    </div>
   </div>
 
 </div>

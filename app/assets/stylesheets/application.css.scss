@@ -23,7 +23,17 @@
 
 
 // General
+.post-time-stamp {
+  color: gray;
+  font-weight: bolder;
+  text-align: right;
+  width: 100%;
+  transition: color 0.5s;
 
+}
+.post-time-stamp:hover{
+  color: cornflowerblue;
+}
 html, body {
   height: 100%;
 }
@@ -52,6 +62,8 @@ html, body {
 .blog-title{
   font-size: 50px;
   text-align: center;
+  font-weight: bold;
+
 }
 
 .blog-author-show{
@@ -130,6 +142,7 @@ img.bg {
   // text-align: center;
   font-size: 75px;
   font-family: 'Nunito', sans-serif;
+  font-weight: bold;
 }
 
 .site-description{
@@ -151,7 +164,7 @@ img.bg {
   color: white;
   // background: rgba(200, 191, 195, .7);
   // opacity: 0.7;
-  text-shadow: 2px 2px grey;
+  text-shadow: 1px 1px grey;
 
 }
 
@@ -163,12 +176,8 @@ img.bg {
   min-height: 50px;
 }
 
-.new-user-input{
-  padding-bottom: 30px;
-}
-
 .login-signup-button{
-  // background-color: white;
+  margin-top: 20px;
 }
 
 // .login {
@@ -259,6 +268,8 @@ img.bg {
 .blog-author{
   padding: 5px;
   text-align: center;
+  font-family: 'Scada', sans-serif;
+
 }
 
 .blog-pic-for-post{
@@ -266,6 +277,7 @@ img.bg {
   margin: 0 auto;
   background-color: #57a544;
   border-radius: 10px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .post-title{
@@ -373,11 +385,14 @@ a:active{
 
 #username-display{
   float: right;
+  font-family: 'Scada', sans-serif;
+  font-size: 18px;
 }
 
 #site-name{
-  font-size: 40px;
+  font-size: 45px;
   font-family: 'Nunito', sans-serif;
+  font-weight: bold;
   // font-family: 'Scada', sans-serif;
   // font-family: 'Arvo', serif;
 }

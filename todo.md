@@ -1,17 +1,17 @@
 questions:
   - ordering won't work again
-  - 
+    - blog show pages
+      - refresh -> it's most recent first
+    - feed
+      - i think it's
+    - my blog
+      - when i write a post it goes to the bottom
+      - after refreshing it's in correct order
 
-  - can't space out input boxes
-  - login button won't show up
+  - can't space out input boxes on login
+  - moment (js)
 
 styling:
-  - login
-    - maybe have login/signin render same view?
-    - top right corner button
-    - space out subtitle
-    - doesn't display error
-
   - apply fonts
 
   - Seed Data
@@ -19,9 +19,14 @@ styling:
 
   - guest login
 
+
   - error messages
     - login/new user don't display them at all
     -
+
+  - Feed
+    - add links on posts to the that post's blog show page
+
 
   - all blogs
     - fix all blogs page
@@ -32,13 +37,8 @@ styling:
   - button color
     - change hover color
 
-  - Feed
-    - add links on posts to the that post's blog show page
-
   - extra
     - could order all blogs by most recent (the same way all the posts are ordered)
-
-    - add shadow to post show blog pic
 
 steps
 

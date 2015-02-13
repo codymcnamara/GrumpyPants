@@ -6,4 +6,4 @@ json.followed blog.followers.include?(current_user)
 
 json.author blog.user.username
 
-json.posts blog.posts, :id, :title, :body, :post_url, :blog_id, :created_at, :updated_at
+json.posts blog.posts.order("created_at DESC"), :id, :title, :body, :post_url, :blog_id, :created_at, :updated_at

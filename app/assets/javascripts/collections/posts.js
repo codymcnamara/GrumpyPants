@@ -3,7 +3,7 @@ Grumblr.Collections.Posts = Backbone.Collection.extend({
   model: Grumblr.Models.Post,
 
   comparator: function(post){
-    return -post.id
+    return -post.id;
   },
 
   parse: function (posts) {

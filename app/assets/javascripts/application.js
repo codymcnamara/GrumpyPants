@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.serializeJSON
 //= require jquery_ujs
+//= require moment.min
 //= require bootstrap.min
 //= require underscore
 //= require backbone
