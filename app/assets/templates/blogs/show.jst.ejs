@@ -2,7 +2,7 @@
 
   <div class="blog-box-left">
     <div class="blog-author-show">
-      <%= blog.escape("author") %>'s
+      <%= blog.escape("author") %>'s blog
     </div>
   </div>
 
@@ -15,7 +15,7 @@
       <% if(blog.get("user_id") != Grumblr.currentUser.id){ %>
         <button
         data-follow-state="<%= blog.get("followed") === true ? "following" : "unfollowed" %>"
-        class="follow"
+        class="follow follow-btn btn btn-primary"
           ><%= blog.get("followed") === true ? "Unfollow" : "Follow" %></button>
       <% } %>
     </div>

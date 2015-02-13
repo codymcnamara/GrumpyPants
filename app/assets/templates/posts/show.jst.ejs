@@ -1,5 +1,5 @@
 <div class="post-box-left">
-  
+
   <div class="blog-pic-for-post">
     <% if (blog && blog.escape("filepicker_url")) { %>
       <img src="<%= blog.escape("filepicker_url") %>"
@@ -12,7 +12,7 @@
 
   <div class="blog-author">
     <% if (post.escape("author")) { %>
-        by <%= post.escape("author") %>
+        <%= post.escape("author") %>
     <% } %>
   </div>
 
