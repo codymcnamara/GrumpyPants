@@ -9,30 +9,38 @@ styling:
       - display blog pic?
 
   - login
-    - use one fo the snippets
-    - default page is sign in page.
-    - make it less ugly
     - maybe have login/signin render same view?
-    - top right corner link
+    - top right corner button
+    - space out subtitle
+
+  - Seed Data
+    - https://github.com/rroblak/seed_dump
+
+  - guest login
+
+  - button color
+    - all blogs and blog show page
+
+
+
+  - all blogs
+    - fix all blogs page
+    - take away background color
 
   - blog form
     - make it a modal
 
-  - post form
-    - bootstrap horizontal form
+  - Feed
+    - add links on posts to the that post's blog show page
 
-  - all blogs
-    - fix all blogs page
+  - extra
+    - could order all blogs by most recent (the same way all the posts are ordered)
 
 steps
+
   - Pagination
     - for all blogs page and blog show
 
-  - Random
-    - Feed
-      - add links on posts to the that post's blog show page
-    - decide how to show blog title and blog pic on blog show page
-    - could order all blogs by most recent (the same way all the posts are ordered)
 
 fun styling
   -have the blog pic box drag with the photo, like ti does in tumblr

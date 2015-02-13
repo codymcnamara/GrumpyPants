@@ -1,14 +1,15 @@
 <div class="blog-heading-info">
 
-  <div class="blog-inner-box">
+  <div class="blog-box-left">
+    <div class="blog-author-show">
+      <%= blog.escape("author") %>'s
+    </div>
+  </div>
+
+  <div class="blog-box-right">
     <div class="blog-title">
       <strong><%= blog.get("title") %></strong>
     </div>
-
-    <div class="blog-author-show">
-      <%= blog.escape("author") %>
-    </div>
-
 
     <div class="follow-button">
       <% if(blog.get("user_id") != Grumblr.currentUser.id){ %>
@@ -19,6 +20,7 @@
       <% } %>
     </div>
   </div>
+
 
   <!-- <div class="blog-backdrop">
     <div class="blog-profile-pic-box">
@@ -53,6 +55,9 @@
 
 </div>
 
+<div class="clear-line">
+
+</div>
 
 <div class="blog-posts">
 

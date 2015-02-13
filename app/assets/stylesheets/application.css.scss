@@ -37,30 +37,53 @@ html, body {
 
 // blog show
 
-
 .blog-heading-info{
-  min-height: 100px;
+  min-height: 110px;
   width: 700px;
   margin: 0 auto;
   border-radius: 10px;
-  text-align: center;
+}
+
+.clear-line{
+  clear: both;
+  margin-bottom: 10px;
 }
 
 .blog-title{
   font-size: 50px;
-
+  text-align: center;
 }
 
 .blog-author-show{
-  font-size: 15px;
+  color: white;
+  padding-top: 20px;
+  font-size: 20px;
+  float: right;
+  -ms-transform: rotate(-30deg); /* IE 9 */
+  -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
 }
 
-.blog-inner-box{
-  margin: 30px;
+.blog-box-left{
+  float: left;
+  width: 100px;
+  min-height: 50px;
 }
+
+.blog-box-right{
+  float: left;
+  width: 600px;
+  // background-color: white;
+}
+
+// .blog-inner-box{
+//   margin: 30px;
+// }
 
 .follow-button{
-  // float: right;
+  float: right;
+  margin-right: -50px;
+  -ms-transform: rotate(20deg); /* IE 9 */
+  -webkit-transform: rotate(20deg);
 }
 
 // .blog-profile-pic-box{
@@ -210,7 +233,10 @@ img.bg {
   text-align: center;
 }
 
-// post show
+
+
+// POST SHOW
+
 .post-show-container{
   min-height: 110px;
   width: 700px;
