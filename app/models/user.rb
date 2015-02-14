@@ -2,12 +2,13 @@ class User < ActiveRecord::Base
   attr_reader :password
 
   after_initialize :ensure_session_token
-  has_one :blog
+  has_one :blog, dependent: :destroy
   has_many(
     :followings,
     class_name: 'Following',
     primary_key: :id,
-    foreign_key: :follower_id
+    foreign_key: :follower_id,
+    dependent: :destroy
   )
   has_many(
     :followed_blogs,

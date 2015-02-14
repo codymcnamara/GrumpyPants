@@ -32,6 +32,8 @@ gem 'figaro'
 
 gem 'kaminari'
 
+gem 'seed_dump'
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', require: 'bcrypt'
 
