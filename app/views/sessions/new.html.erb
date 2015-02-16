@@ -53,12 +53,27 @@
                   placeholder="password">
           </div>
 
-          <input class="btn btn-lg btn-primary btn-block" type="submit" id="login" value="Login As Guest">
+          <input class="btn btn-lg btn-primary btn-block"
+                type="submit" id="login" value="Login »">
 
-          <input class="btn btn-lg btn-success btn-block" type="submit" id="login" value="Login »">
+          <input class="btn btn-lg btn-success btn-block guest-login"
+                type="submit" value="Login As Guest">
 
         </form>
       </div>
   </div>
 
 </div>
+
+
+<script charset="utf-8">
+  $('.guest-login').on('click', signInGuest)
+
+  function signInGuest(event){
+    event.preventDefault();
+    $('#user_username').val('Grumpy_Guest');
+    $('#user_password').val('password');
+    $('#login').trigger('click');
+  }
+
+</script>
