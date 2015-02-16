@@ -6,6 +6,13 @@ Blog.create!([
   {user_id: 5, title: "I so tired of being alone", filepicker_url: "https://www.filepicker.io/api/file/53vreCMrSZGc3wC4pguk"},
   {user_id: 6, title: "Let's get Grumpy", filepicker_url: nil}
 ])
+Following.create!([
+  {follower_id: 6, blog_id: 5},
+  {follower_id: 6, blog_id: 3},
+  {follower_id: 6, blog_id: 4},
+  {follower_id: 6, blog_id: 2},
+  {follower_id: 6, blog_id: 1}
+])
 Post.create!([
   {blog_id: 1, title: "shower probs", body: "", post_url: "https://www.filepicker.io/api/file/KWuiEDS9uRECXjfwvFLw"},
   {blog_id: 1, title: "it's gonna bother me so much", body: "", post_url: "https://www.filepicker.io/api/file/ROweqJDOQqCfvip9mS9g"},
@@ -23,10 +30,10 @@ Post.create!([
   {blog_id: 6, title: "Snow White's Overrated ", body: "She's not as cool off the set", post_url: nil}
 ])
 User.create!([
-  {session_token: "pZHUDpSGumtMSDOGTF9seA", username: "FirstWorldGirl", email: "life@hard.com", password_digest: "$2a$10$RsMl8iBpKmZ4BxxaExB28.i/TnY4jyp52DwNXt4NWUdjlTKe7veU2"},
+  {session_token: "deAFAaHae75Kk9_SCiHAZg", username: "FirstWorldGirl", email: "life@hard.com", password_digest: "$2a$10$RsMl8iBpKmZ4BxxaExB28.i/TnY4jyp52DwNXt4NWUdjlTKe7veU2"},
   {session_token: "R4Az-njTgaqgwyKRMvYzug", username: "T-Rex", email: "big@mouth.org", password_digest: "$2a$10$tu8D8zoFgq7.Y/nIz6N3r.E6VzWlkq0XBmFop9e1HqpkQE0yASy4m"},
   {session_token: "iqewSMBordsro06kfE95Rw", username: "GrumpyCat", email: "go@away.com", password_digest: "$2a$10$2oWA0A4QZ72AoNltvEn9aexvVGHSI2Ny3JrysUqpqqb6hbpstoXpy"},
   {session_token: "iTNvAfQ26aBgZW782NTS5Q", username: "Henry VIII", email: "king@england.uk", password_digest: "$2a$10$MCFyFXYh9Je5BJNeKEiqEuvpL3I3uV0xaSxdbCnKfjCCZN7Sv69fG"},
   {session_token: "2zDJiRoR2_0OSdGL-YtxUw", username: "Al Green", email: "solonely@soul.org", password_digest: "$2a$10$2nw9nfMQFYfMWs4N0EHw8u4LzKPM0B20JrCSGZsj4zdqLa3SKF.sW"},
-  {session_token: "fUG6WMtJsW8IUv0YLTZUkg", username: "Grumpy_Guest", email: "grump@pants.com", password_digest: "$2a$10$4ThSziRU32WXgLijai5mzuwo/4CZohctqRebrBBpXcRdcaRK30eJy"}
+  {session_token: "fic9dUeUPoN-1JSAtoX0vA", username: "Grumpy_Guest", email: "grump@pants.com", password_digest: "$2a$10$4ThSziRU32WXgLijai5mzuwo/4CZohctqRebrBBpXcRdcaRK30eJy"}
 ])
