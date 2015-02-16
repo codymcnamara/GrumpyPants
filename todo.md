@@ -1,17 +1,6 @@
 questions:
-  - newly created post shows up at bottom of page
-
-
-  - when writing new post from "my blog" page, the modal won't close automatically or add to hte page automatically. however if you navigate away and back (within backbone or refresh) it'll be there
-  - writing from "all users" page it redirects to my blog, but post is at the bottom. 
 
 styling:
-
-  - Seed Data
-    - https://github.com/rroblak/seed_dump
-
-  - guest login
-
 
   - error messages
     - login/new user don't display them at all
@@ -19,6 +8,7 @@ styling:
 
   - Feed
     - add links on posts to the that post's blog show page
+
 
 
   - nav
@@ -44,11 +34,10 @@ steps
     - set up thing so heroku fast,
 
 fun styling
-  -have the blog pic box drag with the photo, like ti does in tumblr
+  -have the blog pic box drag with the photo, like it does in tumblr
 
 After MVP
   - good styling
-  - seed data
   - reblogging
   - sad puppy page
   - search
