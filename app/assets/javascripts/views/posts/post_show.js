@@ -16,5 +16,11 @@ Grumblr.Views.PostShow = Backbone.View.extend({
     });
     this.$el.html(temp);
     return this;
+  },
+
+  redirectToBlogShow: function(){
+    if(this.blog){
+      Backbone.history.navigate("#blogs/" + this.model.id, { trigger: true });
+    }
   }
 });

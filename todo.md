@@ -2,13 +2,8 @@ questions:
 
 styling:
 
-  - error messages
-    - login/new user don't display them at all
-    -
-
   - Feed
     - add links on posts to the that post's blog show page
-
 
 
   - nav

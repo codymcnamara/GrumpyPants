@@ -6,7 +6,7 @@ Grumblr.Views.BlogItemShow = Backbone.View.extend({
   events: {
     "click .btn.follow": "switchFollowStatus",
     "click .box-icon": "redirectToBlogShow",
-    "click .text-center": "redirectToBlogShow"
+    "click .info": "redirectToBlogShow"
   },
 
   render: function(){
@@ -33,8 +33,11 @@ Grumblr.Views.BlogItemShow = Backbone.View.extend({
     }
   },
 
-  redirectToBlogShow: function(){
-    Backbone.history.navigate("#blogs/" + this.model.id, { trigger: true })
+  redirectToBlogShow: function(event){
+    if ( $(event.target).hasClass('follow') ){
+    } else {
+      Backbone.history.navigate("#blogs/" + this.model.id, { trigger: true });
+    }
   }
 
 
