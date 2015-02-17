@@ -14,17 +14,22 @@ Grumblr.Models.Blog = Backbone.Model.extend({
       success: function(){
         options.btn.data("follow-state", options.followState)
         options.btn.html(options.btnText);
-        options.success && options.success();
+
+        if(options.modifyCollection === "add"){
+          Grumblr.feed.add(that.posts().models)
+        } else if ( options.modifyCollection === "remove" ) {
+          var removedPosts = Grumblr.feed.where({ blog_id: that.id })
+          Grumblr.feed.remove(removedPosts)
+        }
       },
       error: function(){
-        options.error && options.error();
         alert('something went wrong while following');
       }
     })
   },
 
   follow: function(options){
-    this.set('followed', true)
+    this.set('followed', true);
     this._updateFollow('post', options);
   },
 
