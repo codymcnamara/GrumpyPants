@@ -1,7 +1,7 @@
 # GrumpyPants
 A Tumblr clone exclusively for complaining. Built on Rails and Backbone.
 
-[Live link](http://wwww.grumpypants.io)
+[Live link](http://www.grumpypants.io)
 
 ## Programming highlights
 
