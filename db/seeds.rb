@@ -3,11 +3,10 @@ Blog.create!([
   {user_id: 2, title: "Small Arms Big Problems", filepicker_url: "https://www.filepicker.io/api/file/JNuSvF6aTnuhzq6jYOy2"},
   {user_id: 3, title: "Go Away", filepicker_url: "https://www.filepicker.io/api/file/dT2E6bAzTLusjvuOhGYj"},
   {user_id: 4, title: "Girl Problems", filepicker_url: "https://www.filepicker.io/api/file/2lrz0sYtRsSvtYDTwZ7T"},
-  {user_id: 5, title: "I so tired of being alone", filepicker_url: "https://www.filepicker.io/api/file/53vreCMrSZGc3wC4pguk"},
+  {user_id: 5, title: "I'm so tired of being alone", filepicker_url: "https://www.filepicker.io/api/file/53vreCMrSZGc3wC4pguk"},
   {user_id: 6, title: "Let's get Grumpy", filepicker_url: nil}
 ])
 Following.create!([
-  {follower_id: 6, blog_id: 5},
   {follower_id: 6, blog_id: 3},
   {follower_id: 6, blog_id: 4},
   {follower_id: 6, blog_id: 2},

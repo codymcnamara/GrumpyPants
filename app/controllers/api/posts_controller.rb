@@ -2,7 +2,6 @@ module Api
   class PostsController < ApiController
     def create
       @post = current_user.blog.posts.new(post_params)
-      # @post = Post.new(post_params)
 
       if @post.save
         render json: @post

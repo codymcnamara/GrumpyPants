@@ -12,7 +12,6 @@ Backbone.CompositeView = Backbone.View.extend({
   },
 
   attachSubview: function (selector, subview, reverse) {
-    // cody: changed this from append to prepend so lastest would render first
     if (reverse) {
       this.$(selector).prepend(subview.$el);
     } else {

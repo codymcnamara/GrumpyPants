@@ -15,8 +15,7 @@ Grumblr.Routers.Router = Backbone.Router.extend({
     Grumblr.blogs.fetch({
       success: function(){
         var currentBlog = Grumblr.blogs.findWhere({ user_id: Grumblr.currentUser.id})
-        // redirect if user already has a blog
-        if(currentBlog){
+        if(currentBlog){ // redirect if user already has a blog
           Backbone.history.navigate('#/feed');
         } else {
           var newModel = new Grumblr.Models.Blog();
