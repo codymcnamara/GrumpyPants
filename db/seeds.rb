@@ -1,10 +1,10 @@
 Blog.create!([
   {user_id: 1, title: "First World Problems", filepicker_url: "https://www.filepicker.io/api/file/iA2YnVMAQOqqKU0guJFi"},
-  {user_id: 2, title: "Small Arms Big Problems", filepicker_url: "https://www.filepicker.io/api/file/JNuSvF6aTnuhzq6jYOy2"},
+  {user_id: 2, title: "My Arms Are Too Small", filepicker_url: "https://www.filepicker.io/api/file/JNuSvF6aTnuhzq6jYOy2"},
   {user_id: 3, title: "Go Away", filepicker_url: "https://www.filepicker.io/api/file/dT2E6bAzTLusjvuOhGYj"},
   {user_id: 4, title: "Girl Problems", filepicker_url: "https://www.filepicker.io/api/file/2lrz0sYtRsSvtYDTwZ7T"},
   {user_id: 5, title: "I'm so tired of being alone", filepicker_url: "https://www.filepicker.io/api/file/53vreCMrSZGc3wC4pguk"},
-  {user_id: 6, title: "Let's get Grumpy", filepicker_url: nil}
+  {user_id: 6, title: "I'm just too darn pouty", filepicker_url: nil}
 ])
 Following.create!([
   {follower_id: 6, blog_id: 3},
@@ -13,8 +13,8 @@ Following.create!([
   {follower_id: 6, blog_id: 1}
 ])
 Post.create!([
-  {blog_id: 1, title: "shower probs", body: "", post_url: "https://www.filepicker.io/api/file/KWuiEDS9uRECXjfwvFLw"},
   {blog_id: 1, title: "it's gonna bother me so much", body: "", post_url: "https://www.filepicker.io/api/file/ROweqJDOQqCfvip9mS9g"},
+  {blog_id: 1, title: "shower probs", body: "", post_url: "https://www.filepicker.io/api/file/KWuiEDS9uRECXjfwvFLw"},
   {blog_id: 1, title: "making food", body: "", post_url: "https://www.filepicker.io/api/file/KCmTrKRITkeogPQ5RZRe"},
   {blog_id: 2, title: "I can never be a gymnast", body: "", post_url: "https://www.filepicker.io/api/file/UHFr2ZSuRCjcbcnHcvIQ"},
   {blog_id: 3, title: "boats", body: "", post_url: "https://www.filepicker.io/api/file/gLDry7jTEW3eNhSn2aqN"},
@@ -34,5 +34,5 @@ User.create!([
   {session_token: "iqewSMBordsro06kfE95Rw", username: "GrumpyCat", email: "go@away.com", password_digest: "$2a$10$2oWA0A4QZ72AoNltvEn9aexvVGHSI2Ny3JrysUqpqqb6hbpstoXpy"},
   {session_token: "iTNvAfQ26aBgZW782NTS5Q", username: "Henry VIII", email: "king@england.uk", password_digest: "$2a$10$MCFyFXYh9Je5BJNeKEiqEuvpL3I3uV0xaSxdbCnKfjCCZN7Sv69fG"},
   {session_token: "2zDJiRoR2_0OSdGL-YtxUw", username: "Al Green", email: "solonely@soul.org", password_digest: "$2a$10$2nw9nfMQFYfMWs4N0EHw8u4LzKPM0B20JrCSGZsj4zdqLa3SKF.sW"},
-  {session_token: "fic9dUeUPoN-1JSAtoX0vA", username: "Grumpy_Guest", email: "grump@pants.com", password_digest: "$2a$10$4ThSziRU32WXgLijai5mzuwo/4CZohctqRebrBBpXcRdcaRK30eJy"}
+  {session_token: "fic9dUeUPoN-1JSAtoX0vA", username: "Guest", email: "grumpy@pants.com", password_digest: "$2a$10$4ThSziRU32WXgLijai5mzuwo/4CZohctqRebrBBpXcRdcaRK30eJy"}
 ])
