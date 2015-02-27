@@ -1,5 +1,6 @@
 questions:
 
+  - have some sort of greeting on feed page if user not following anyone yet
 
   - git rid of following model/collections (do they do anything?)
 
