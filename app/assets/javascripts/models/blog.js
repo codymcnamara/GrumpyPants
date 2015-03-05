@@ -15,9 +15,9 @@ Grumblr.Models.Blog = Backbone.Model.extend({
         options.btn.data("follow-state", options.followState)
         options.btn.html(options.btnText);
 
-        if(options.modifyCollection === "add"){
+        if(options.followState === "following"){
           Grumblr.feed.add(that.posts().models)
-        } else if ( options.modifyCollection === "remove" ) {
+        } else if ( options.followState === "unfollowed" ) {
           var removedPosts = Grumblr.feed.where({ blog_id: that.id })
           Grumblr.feed.remove(removedPosts)
         }

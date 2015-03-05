@@ -1,6 +1,10 @@
-questions:
+
 
   - have some sort of greeting on feed page if user not following anyone yet
+
+  - refactor updateFollow
+    - don't need  modifyCollection, just say "if options.followState ==="
+
 
   - git rid of following model/collections (do they do anything?)
 
@@ -28,6 +32,9 @@ questions:
 
   - extra
     - could order all blogs by most recent (the same way all the posts are ordered)
+
+  - refactoring
+    - the app currently defines switchFollowStatus method in two different views . maybe use event aggregator (http://stackoverflow.com/questions/7708195/access-function-in-one-view-from-another-in-backbone-js)
 
 steps
 

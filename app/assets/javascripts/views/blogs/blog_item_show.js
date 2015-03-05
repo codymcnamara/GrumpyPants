@@ -22,15 +22,13 @@ Grumblr.Views.BlogItemShow = Backbone.View.extend({
       this.model.follow({
         btn: btn,
         followState: "following",
-        btnText: 'Unfollow',
-        modifyCollection: "add"
+        btnText: 'Unfollow'
       })
     } else {
       this.model.unfollow({
         btn: btn,
         followState: "unfollowed",
-        btnText: 'Follow',
-        modifyCollection: "remove"
+        btnText: 'Follow'
       })
     }
   },
