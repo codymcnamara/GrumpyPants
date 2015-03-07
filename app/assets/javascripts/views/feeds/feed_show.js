@@ -4,7 +4,6 @@ Grumblr.Views.FeedShow = Backbone.CompositeView.extend({
   initialize: function(){
     this.listenTo(this.collection, 'add', this.addPost);
     this.listenTo(this.collection, 'remove', this.removePost);
-
     this.collection.each(this.addPost.bind(this));
   },
 

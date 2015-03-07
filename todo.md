@@ -1,11 +1,11 @@
 
 
-  - have some sort of greeting on feed page if user not following anyone yet
+  - have some sort of greeting on feed page if user not following anyone yet. needs to check if collection empty AFTER it's fetched the Grumblr.feed
 
   - refactor updateFollow
     - don't need  modifyCollection, just say "if options.followState ==="
 
-  - git rid of following model/collections (do they do anything?)
+  - if you grumpypants.io after logging in it takes you too blank page (it should go to feed)
 
   - styling:
     - css.annotate
