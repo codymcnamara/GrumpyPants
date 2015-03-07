@@ -29,89 +29,20 @@
   text-align: right;
   width: 100%;
   transition: color 0.5s;
-
 }
+
 .post-time-stamp:hover{
   color: cornflowerblue;
 }
+
 html, body {
   height: 100%;
 }
 
 .everything{
-  // background-color: #35465c; //this is Tumblr's
-  // background-color: lightblue;
   background-color: cornflowerblue;
   min-height: 100%;
 }
-
-// blog show
-
-.blog-heading-info{
-  min-height: 110px;
-  width: 700px;
-  margin: 0 auto;
-  border-radius: 10px;
-}
-
-.clear-line{
-  clear: both;
-  margin-bottom: 10px;
-}
-
-.blog-title{
-  font-size: 50px;
-  text-align: center;
-  font-weight: bold;
-
-}
-
-.blog-author-show{
-  color: white;
-  padding-top: 20px;
-  font-size: 20px;
-  float: right;
-  -ms-transform: rotate(-30deg); /* IE 9 */
-  -webkit-transform: rotate(-30deg);
-  text-align: center;
-}
-
-.blog-box-left{
-  float: left;
-  width: 100px;
-  min-height: 50px;
-}
-
-.blog-box-right{
-  float: left;
-  width: 600px;
-  // background-color: white;
-}
-
-// .blog-inner-box{
-//   margin: 30px;
-// }
-
-.follow-button{
-  float: right;
-  margin-right: -50px;
-  -ms-transform: rotate(20deg); /* IE 9 */
-  -webkit-transform: rotate(20deg);
-  // padding-bottom: 40px;
-
-}
-
-.follow-btn{
-  background-color: #57a544;
-}
-
-
-.form-control {
-  font-size: 16px;
-  height: auto;
-  padding: 10px;
-}
-
 
 
 // modal
@@ -141,70 +72,7 @@ html, body {
 }
 
 
-
-// POST SHOW
-
-.post-show-container{
-  min-height: 110px;
-  width: 700px;
-  margin: 0 auto;
-}
-
-.blog-info-for-post{
-  float:right;
-}
-
-.post-box-left{
-  float: left;
-  width: 100px;
-  height: 100px;
-}
-
-.post-box-right{
-  float: left;
-  width: 600px;
-  background-color: white;
-  border-radius: 5px;
-  margin-bottom: 26px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-}
-
-.blog-author{
-  padding: 5px;
-  text-align: center;
-  font-family: 'Scada', sans-serif;
-
-}
-
-.blog-pic-for-post{
-  width: 50px;
-  margin: 0 auto;
-  background-color: #57a544;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-}
-
-.post-title{
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-.post-inner-box{
-  margin: 10px;
-}
-
-.post-img{
-  // set max width to column boundaries
-  max-width: 100%;
-  margin-bottom: 10px;
-}
-
-.blog-img{
-  max-width: 100%;
-}
-
-
-// top root page
+// top of root page
 
 #top-bar{
   border-bottom: solid;
@@ -221,77 +89,4 @@ html, body {
   font-size: 45px;
   font-family: 'Nunito', sans-serif;
   font-weight: bold;
-  // font-family: 'Scada', sans-serif;
-  // font-family: 'Arvo', serif;
-}
-
-// all blogs page
-
-.blog-img-all-blogs{
-  max-width: 100%;
-  max-height: 100px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.blog-column{
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-// body {padding-top:50px;}
-
-.box {
-    border-radius: 3px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    padding: 10px 25px;
-    text-align: right;
-    display: block;
-    margin-top: 60px;
-    background-color: white;
-}
-.box-icon {
-    // background-color: #57a544;
-    border-radius: 50%;
-    display: table;
-    height: 100px;
-    margin: 0 auto;
-    width: 100px;
-    margin-top: -61px;
-}
-.box-icon span {
-    color: #fff;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-}
-.info h4 {
-    font-size: 26px;
-    letter-spacing: 2px;
-}
-
-.blog-img-all-blogs{
-  border-radius: 10px;
-  border-color: #57a544;
-}
-
-.info > p {
-    color: #717171;
-    font-size: 16px;
-    padding-top: 10px;
-    text-align: center;
-}
-.info > a {
-    background-color: #57a544;
-    border-radius: 2px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    color: #fff;
-    transition: all 0.5s ease 0s;
-}
-.info > a:hover {
-    background-color: #0288d1;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
-    color: #fff;
-    transition: all 0.5s ease 0s;
 }
