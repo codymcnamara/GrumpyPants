@@ -36,7 +36,7 @@ Grumblr.Views.FeedShow = Backbone.CompositeView.extend({
         view.collection.fetch({
           data: { page: view.collection.page_number + 1 },
           remove: false
-        });
+        })
       }
     }
   },
