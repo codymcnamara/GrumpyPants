@@ -8,8 +8,8 @@ Grumblr.Collections.Posts = Backbone.Collection.extend({
 
   parse: function (posts) {
     if(posts.page){
-      this.page_number = parseInt(posts.page);
-      this.total_pages = parseInt(posts.total_pages);
+      this.pageNumber = parseInt(posts.page);
+      this.totalPages = parseInt(posts.total_pages);
       return _.sortBy(posts.models, function (post) {
         return -post.id;
       })
