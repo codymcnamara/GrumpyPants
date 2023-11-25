@@ -1,8 +1,6 @@
 # GrumpyPants
 A Tumblr clone exclusively for complaining. Built on Rails and Backbone.
 
-[Live link](http://www.grumpypants.io)
-
 ### Programming highlights
 
 * Uses custom SQL query and overwrites Backbone’s “parse”method to order blog posts by most recently created and allow page pagination.
